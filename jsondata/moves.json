@@ -143,7 +143,6 @@
     "num": 512,
     "accuracy": 100,
     "basePower": 55,
-    "callback": true,
     "category": "Physical",
     "name": "Acrobatics",
     "pp": 15,
@@ -157,7 +156,8 @@
     "secondary": null,
     "target": "any",
     "type": "Flying",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "acupressure": {
     "num": 367,
@@ -168,14 +168,14 @@
     "pp": 30,
     "priority": 0,
     "flags": {},
-    "callback": true,
     "secondary": null,
     "target": "adjacentAllyOrSelf",
     "type": "Normal",
     "zMove": {
       "effect": "crit2"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "aerialace": {
     "num": 332,
@@ -229,7 +229,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -238,7 +237,8 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "agility": {
     "num": 97,
@@ -335,11 +335,11 @@
       "bypasssub": 1
     },
     "secondary": {
-      "chance": 100,
-      "callback": true
+      "chance": 100
     },
     "target": "normal",
-    "type": "Fairy"
+    "type": "Fairy",
+    "callback": true
   },
   "allyswitch": {
     "num": 502,
@@ -351,7 +351,6 @@
     "priority": 2,
     "flags": {},
     "stallingMove": true,
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Psychic",
@@ -360,7 +359,8 @@
         "spe": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "amnesia": {
     "num": 133,
@@ -399,12 +399,12 @@
       "mirror": 1
     },
     "secondary": {
-      "chance": 100,
-      "callback": true
+      "chance": 100
     },
     "target": "normal",
     "type": "Steel",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "ancientpower": {
     "num": 246,
@@ -504,7 +504,6 @@
       "snatch": 1
     },
     "volatileStatus": "aquaring",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Water",
@@ -513,7 +512,8 @@
         "def": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "aquastep": {
     "num": 872,
@@ -616,13 +616,13 @@
       "snatch": 1,
       "distance": 1
     },
-    "callback": true,
     "target": "allyTeam",
     "type": "Grass",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "aromaticmist": {
     "num": 597,
@@ -665,17 +665,16 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "assurance": {
     "num": 372,
     "accuracy": 100,
     "basePower": 60,
-    "callback": true,
     "category": "Physical",
     "name": "Assurance",
     "pp": 10,
@@ -688,7 +687,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "astonish": {
     "num": 310,
@@ -760,14 +760,14 @@
       "bypasssub": 1
     },
     "volatileStatus": "attract",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "aurasphere": {
     "num": 396,
@@ -809,9 +809,9 @@
         }
       }
     },
-    "callback": true,
     "target": "normal",
-    "type": "Electric"
+    "type": "Electric",
+    "callback": true
   },
   "aurorabeam": {
     "num": 62,
@@ -847,7 +847,6 @@
       "snatch": 1
     },
     "sideCondition": "auroraveil",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Ice",
@@ -856,7 +855,8 @@
         "spe": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "autotomize": {
     "num": 475,
@@ -870,7 +870,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "boosts": {
       "spe": 2
     },
@@ -880,13 +879,13 @@
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "avalanche": {
     "num": 419,
     "accuracy": 100,
     "basePower": 60,
-    "callback": true,
     "category": "Physical",
     "name": "Avalanche",
     "pp": 10,
@@ -899,7 +898,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Ice",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "axekick": {
     "num": 853,
@@ -915,13 +915,13 @@
       "mirror": 1
     },
     "hasCrashDamage": true,
-    "callback": true,
     "secondary": {
       "chance": 30,
       "volatileStatus": "confusion"
     },
     "target": "normal",
-    "type": "Fighting"
+    "type": "Fighting",
+    "callback": true
   },
   "babydolleyes": {
     "num": 608,
@@ -985,7 +985,6 @@
     },
     "stallingMove": true,
     "volatileStatus": "banefulbunker",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Poison",
@@ -994,7 +993,8 @@
         "def": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "barbbarrage": {
     "num": 839,
@@ -1008,13 +1008,13 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 50,
       "status": "psn"
     },
     "target": "normal",
-    "type": "Poison"
+    "type": "Poison",
+    "callback": true
   },
   "barrage": {
     "num": 140,
@@ -1071,10 +1071,7 @@
     "pp": 40,
     "priority": 0,
     "flags": {},
-    "callback": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "selfSwitch": "copyvolatile",
     "secondary": null,
     "target": "self",
@@ -1082,7 +1079,8 @@
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "beakblast": {
     "num": 690,
@@ -1101,17 +1099,16 @@
       "failcopycat": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Flying",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "beatup": {
     "num": 251,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Beat Up",
     "pp": 10,
@@ -1124,7 +1121,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "behemothbash": {
     "num": 782,
@@ -1182,11 +1180,11 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Poison",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "bellydrum": {
     "num": 187,
@@ -1199,14 +1197,14 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "bestow": {
     "num": 516,
@@ -1224,7 +1222,6 @@
       "noassist": 1,
       "failcopycat": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -1233,7 +1230,8 @@
         "spe": 2
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "bide": {
     "num": 117,
@@ -1252,11 +1250,11 @@
     },
     "volatileStatus": "bide",
     "ignoreImmunity": true,
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "bind": {
     "num": 20,
@@ -1442,7 +1440,6 @@
       "mirror": 1,
       "wind": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "boosts": {
@@ -1450,7 +1447,8 @@
       }
     },
     "target": "allAdjacentFoes",
-    "type": "Flying"
+    "type": "Flying",
+    "callback": true
   },
   "blizzard": {
     "num": 59,
@@ -1465,14 +1463,14 @@
       "mirror": 1,
       "wind": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 10,
       "status": "frz"
     },
     "target": "allAdjacentFoes",
     "type": "Ice",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "block": {
     "num": 335,
@@ -1486,7 +1484,6 @@
       "reflectable": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -1495,7 +1492,8 @@
         "def": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "bloodmoon": {
     "num": 901,
@@ -1594,7 +1592,6 @@
     "num": 754,
     "accuracy": 100,
     "basePower": 85,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Bolt Beak",
@@ -1607,7 +1604,8 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Electric"
+    "type": "Electric",
+    "callback": true
   },
   "boltstrike": {
     "num": 550,
@@ -1738,14 +1736,14 @@
       "noassist": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "status": "par"
     },
     "target": "any",
     "type": "Flying",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "bouncybubble": {
     "num": 733,
@@ -1861,11 +1859,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "brine": {
     "num": 362,
@@ -1879,11 +1877,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Water",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "brutalswing": {
     "num": 693,
@@ -1961,11 +1959,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Bug",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "bugbuzz": {
     "num": 405,
@@ -2100,10 +2098,10 @@
     },
     "stallingMove": true,
     "volatileStatus": "burningbulwark",
-    "callback": true,
     "secondary": null,
     "target": "self",
-    "type": "Fire"
+    "type": "Fire",
+    "callback": true
   },
   "burningjealousy": {
     "num": 807,
@@ -2118,12 +2116,12 @@
       "mirror": 1
     },
     "secondary": {
-      "chance": 100,
-      "callback": true
+      "chance": 100
     },
     "target": "allAdjacentFoes",
     "type": "Fire",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "burnup": {
     "num": 682,
@@ -2138,14 +2136,12 @@
       "mirror": 1,
       "defrost": 1
     },
-    "callback": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "normal",
     "type": "Fire",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "buzzybuzz": {
     "num": 734,
@@ -2203,7 +2199,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -2212,7 +2207,8 @@
         "evasion": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "captivate": {
     "num": 445,
@@ -2228,7 +2224,6 @@
       "reflectable": 1,
       "mirror": 1
     },
-    "callback": true,
     "boosts": {
       "spa": -2
     },
@@ -2240,7 +2235,8 @@
         "spd": 2
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "catastropika": {
     "num": 658,
@@ -2274,10 +2270,10 @@
       "mirror": 1,
       "slicing": 1
     },
-    "callback": true,
     "secondary": {},
     "target": "normal",
-    "type": "Dark"
+    "type": "Dark",
+    "callback": true
   },
   "celebrate": {
     "num": 606,
@@ -2294,7 +2290,6 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -2307,7 +2302,8 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "charge": {
     "num": 268,
@@ -2321,7 +2317,6 @@
       "snatch": 1
     },
     "volatileStatus": "charge",
-    "callback": true,
     "boosts": {
       "spd": 1
     },
@@ -2333,7 +2328,8 @@
         "spd": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "chargebeam": {
     "num": 451,
@@ -2567,7 +2563,6 @@
       "sound": 1,
       "dance": 1
     },
-    "callback": true,
     "boosts": {
       "atk": 1,
       "def": 1,
@@ -2577,7 +2572,8 @@
     },
     "secondary": null,
     "target": "self",
-    "type": "Dragon"
+    "type": "Dragon",
+    "callback": true
   },
   "clangoroussoulblaze": {
     "num": 728,
@@ -2619,11 +2615,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Poison",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "closecombat": {
     "num": 370,
@@ -2706,11 +2702,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "combattorque": {
     "num": 899,
@@ -2770,7 +2766,6 @@
     "num": 894,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Comeuppance",
     "pp": 10,
@@ -2784,7 +2779,8 @@
     "secondary": null,
     "target": "scripted",
     "type": "Dark",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "confide": {
     "num": 590,
@@ -2908,7 +2904,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -2921,7 +2916,8 @@
         "spe": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "conversion2": {
     "num": 176,
@@ -2934,14 +2930,14 @@
     "flags": {
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "copycat": {
     "num": 383,
@@ -2959,7 +2955,6 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -2968,7 +2963,8 @@
         "accuracy": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "coreenforcer": {
     "num": 687,
@@ -2983,14 +2979,14 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Dragon",
     "zMove": {
       "basePower": 140
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "corkscrewcrash": {
     "num": 638,
@@ -3022,10 +3018,10 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacent",
-    "type": "Poison"
+    "type": "Poison",
+    "callback": true
   },
   "cosmicpower": {
     "num": 322,
@@ -3103,7 +3099,6 @@
     "num": 68,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Counter",
     "pp": 20,
@@ -3121,7 +3116,8 @@
     "maxMove": {
       "basePower": 75
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "courtchange": {
     "num": 756,
@@ -3134,10 +3130,10 @@
     "flags": {
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "all",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "covet": {
     "num": 343,
@@ -3155,11 +3151,11 @@
       "noassist": 1,
       "failcopycat": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "crabhammer": {
     "num": 152,
@@ -3191,7 +3187,6 @@
     "priority": 3,
     "flags": {},
     "sideCondition": "craftyshield",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Fairy",
@@ -3200,7 +3195,8 @@
         "spd": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "crosschop": {
     "num": 238,
@@ -3295,7 +3291,6 @@
     "num": 462,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Crush Grip",
     "pp": 5,
@@ -3314,7 +3309,8 @@
     "maxMove": {
       "basePower": 140
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "curse": {
     "num": 174,
@@ -3328,7 +3324,6 @@
       "bypasssub": 1
     },
     "volatileStatus": "curse",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "nonGhostTarget": "self",
@@ -3336,7 +3331,8 @@
     "zMove": {
       "effect": "curse"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "cut": {
     "num": 15,
@@ -3413,7 +3409,6 @@
       "mirror": 1
     },
     "status": "slp",
-    "callback": true,
     "noSketch": true,
     "secondary": null,
     "target": "allAdjacentFoes",
@@ -3421,7 +3416,8 @@
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "dazzlinggleam": {
     "num": 605,
@@ -3499,7 +3495,6 @@
       "def": 1
     },
     "volatileStatus": "defensecurl",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -3508,7 +3503,8 @@
         "accuracy": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "defog": {
     "num": 432,
@@ -3524,7 +3520,6 @@
       "mirror": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Flying",
@@ -3533,7 +3528,8 @@
         "accuracy": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "destinybond": {
     "num": 194,
@@ -3549,14 +3545,14 @@
       "failcopycat": 1
     },
     "volatileStatus": "destinybond",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Ghost",
     "zMove": {
       "effect": "redirect"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "detect": {
     "num": 197,
@@ -3572,7 +3568,6 @@
     },
     "stallingMove": true,
     "volatileStatus": "protect",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Fighting",
@@ -3581,7 +3576,8 @@
         "evasion": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "devastatingdrake": {
     "num": 652,
@@ -3640,11 +3636,11 @@
       "noassist": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ground",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "disable": {
     "num": 50,
@@ -3661,14 +3657,14 @@
       "bypasssub": 1
     },
     "volatileStatus": "disable",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "disarmingvoice": {
     "num": 574,
@@ -3723,11 +3719,11 @@
       "mirror": 1
     },
     "secondary": {
-      "chance": 50,
-      "callback": true
+      "chance": 50
     },
     "target": "normal",
-    "type": "Poison"
+    "type": "Poison",
+    "callback": true
   },
   "dive": {
     "num": 291,
@@ -3748,11 +3744,11 @@
       "noassist": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Water",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "dizzypunch": {
     "num": 146,
@@ -3786,10 +3782,10 @@
     "pp": 10,
     "priority": 0,
     "flags": {},
-    "callback": true,
     "secondary": null,
     "target": "adjacentFoe",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "doomdesire": {
     "num": 353,
@@ -3802,11 +3798,11 @@
     "flags": {
       "futuremove": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Steel",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "doubleedge": {
     "num": 38,
@@ -3920,14 +3916,12 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "normal",
     "type": "Electric",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "doubleslap": {
     "num": 3,
@@ -4053,10 +4047,10 @@
       "allyanim": 1
     },
     "volatileStatus": "dragoncheer",
-    "callback": true,
     "secondary": null,
     "target": "adjacentAlly",
-    "type": "Dragon"
+    "type": "Dragon",
+    "callback": true
   },
   "dragonclaw": {
     "num": 337,
@@ -4126,7 +4120,6 @@
     "num": 820,
     "accuracy": 100,
     "basePower": 150,
-    "callback": true,
     "category": "Special",
     "name": "Dragon Energy",
     "pp": 5,
@@ -4137,7 +4130,8 @@
     },
     "secondary": null,
     "target": "allAdjacentFoes",
-    "type": "Dragon"
+    "type": "Dragon",
+    "callback": true
   },
   "dragonhammer": {
     "num": 692,
@@ -4300,11 +4294,11 @@
       1,
       2
     ],
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "drillpeck": {
     "num": 65,
@@ -4497,7 +4491,6 @@
     "num": 497,
     "accuracy": 100,
     "basePower": 40,
-    "callback": true,
     "category": "Special",
     "name": "Echoed Voice",
     "pp": 15,
@@ -4511,7 +4504,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "eerieimpulse": {
     "num": 598,
@@ -4554,11 +4548,11 @@
       "bypasssub": 1
     },
     "secondary": {
-      "chance": 100,
-      "callback": true
+      "chance": 100
     },
     "target": "normal",
-    "type": "Psychic"
+    "type": "Psychic",
+    "callback": true
   },
   "eggbomb": {
     "num": 121,
@@ -4591,7 +4585,6 @@
       "nonsky": 1
     },
     "terrain": "electricterrain",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Electric",
@@ -4600,7 +4593,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "electrify": {
     "num": 582,
@@ -4617,7 +4611,6 @@
       "allyanim": 1
     },
     "volatileStatus": "electrify",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Electric",
@@ -4626,13 +4619,13 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "electroball": {
     "num": 486,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "name": "Electro Ball",
     "pp": 10,
@@ -4651,7 +4644,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "electrodrift": {
     "num": 879,
@@ -4666,11 +4660,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Electric",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "electroshot": {
     "num": 905,
@@ -4685,11 +4679,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "hasSheerForce": true,
     "target": "normal",
-    "type": "Electric"
+    "type": "Electric",
+    "callback": true
   },
   "electroweb": {
     "num": 527,
@@ -4728,7 +4722,6 @@
       "mirror": 1
     },
     "volatileStatus": "embargo",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
@@ -4737,7 +4730,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "ember": {
     "num": 52,
@@ -4775,7 +4769,6 @@
       "failencore": 1
     },
     "volatileStatus": "encore",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -4784,13 +4777,13 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "endeavor": {
     "num": 283,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Endeavor",
     "pp": 5,
@@ -4810,7 +4803,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "endure": {
     "num": 203,
@@ -4826,14 +4820,14 @@
     },
     "stallingMove": true,
     "volatileStatus": "endure",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "energyball": {
     "num": 412,
@@ -4872,7 +4866,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -4881,13 +4874,13 @@
         "spd": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "eruption": {
     "num": 284,
     "accuracy": 100,
     "basePower": 150,
-    "callback": true,
     "category": "Special",
     "name": "Eruption",
     "pp": 5,
@@ -4899,7 +4892,8 @@
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Fire",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "esperwing": {
     "num": 840,
@@ -4958,10 +4952,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Psychic"
+    "type": "Psychic",
+    "callback": true
   },
   "explosion": {
     "num": 153,
@@ -5056,11 +5050,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "fairylock": {
     "num": 587,
@@ -5075,7 +5069,6 @@
       "bypasssub": 1
     },
     "pseudoWeather": "fairylock",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Fairy",
@@ -5084,7 +5077,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "fairywind": {
     "num": 584,
@@ -5117,14 +5111,14 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "volatileStatus": "flinch"
     },
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "faketears": {
     "num": 313,
@@ -5184,11 +5178,11 @@
       "mirror": 1
     },
     "onDamagePriority": -20,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "featherdance": {
     "num": 297,
@@ -5269,11 +5263,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Bug",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "ficklebeam": {
     "num": 907,
@@ -5287,10 +5281,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Dragon"
+    "type": "Dragon",
+    "callback": true
   },
   "fierydance": {
     "num": 552,
@@ -5347,7 +5341,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "boosts": {
       "atk": 2,
       "spa": 2,
@@ -5355,13 +5348,13 @@
     },
     "secondary": null,
     "target": "self",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "finalgambit": {
     "num": 515,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "selfdestruct": "ifHit",
     "category": "Special",
     "name": "Final Gambit",
@@ -5377,7 +5370,8 @@
     "zMove": {
       "basePower": 180
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "fireblast": {
     "num": 126,
@@ -5454,7 +5448,6 @@
     "num": 519,
     "accuracy": 100,
     "basePower": 80,
-    "callback": true,
     "category": "Special",
     "name": "Fire Pledge",
     "pp": 10,
@@ -5468,7 +5461,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Fire",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "firepunch": {
     "num": 7,
@@ -5523,17 +5517,16 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Bug",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "fishiousrend": {
     "num": 755,
     "accuracy": 100,
     "basePower": 85,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Fishious Rend",
@@ -5547,7 +5540,8 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Water"
+    "type": "Water",
+    "callback": true
   },
   "fissure": {
     "num": 90,
@@ -5578,7 +5572,6 @@
     "num": 175,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Flail",
     "pp": 15,
@@ -5597,7 +5590,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "flameburst": {
     "num": 481,
@@ -5612,11 +5606,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fire",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "flamecharge": {
     "num": 488,
@@ -5824,11 +5818,11 @@
       "allyanim": 1,
       "noparentalbond": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "flipturn": {
     "num": 812,
@@ -5885,14 +5879,14 @@
       "heal": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fairy",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "flowershield": {
     "num": 579,
@@ -5906,7 +5900,6 @@
     "flags": {
       "distance": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Fairy",
@@ -5915,7 +5908,8 @@
         "def": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "flowertrick": {
     "num": 870,
@@ -5953,11 +5947,11 @@
       "noassist": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "any",
     "type": "Flying",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "flyingpress": {
     "num": 560,
@@ -5974,7 +5968,6 @@
       "distance": 1,
       "nonsky": 1
     },
-    "callback": true,
     "priority": 0,
     "secondary": null,
     "target": "any",
@@ -5982,7 +5975,8 @@
     "zMove": {
       "basePower": 170
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "focusblast": {
     "num": 411,
@@ -6019,7 +6013,6 @@
       "snatch": 1
     },
     "volatileStatus": "focusenergy",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -6028,7 +6021,8 @@
         "accuracy": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "focuspunch": {
     "num": 264,
@@ -6048,11 +6042,11 @@
       "failcopycat": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "followme": {
     "num": 266,
@@ -6067,14 +6061,14 @@
       "failcopycat": 1
     },
     "volatileStatus": "followme",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "forcepalm": {
     "num": 395,
@@ -6113,14 +6107,14 @@
       "bypasssub": 1
     },
     "volatileStatus": "foresight",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
     "zMove": {
       "effect": "crit2"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "forestscurse": {
     "num": 571,
@@ -6136,7 +6130,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
@@ -6149,7 +6142,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "foulplay": {
     "num": 492,
@@ -6182,14 +6176,14 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 10,
       "status": "frz"
     },
     "target": "normal",
     "type": "Ice",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "freezeshock": {
     "num": 553,
@@ -6206,14 +6200,14 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "status": "par"
     },
     "target": "normal",
     "type": "Ice",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "freezingglare": {
     "num": 821,
@@ -6247,11 +6241,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ice",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "frenzyplant": {
     "num": 338,
@@ -6297,7 +6291,6 @@
     "num": 218,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Frustration",
@@ -6317,7 +6310,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "furyattack": {
     "num": 31,
@@ -6345,7 +6339,6 @@
     "num": 210,
     "accuracy": 95,
     "basePower": 40,
-    "callback": true,
     "category": "Physical",
     "name": "Fury Cutter",
     "pp": 20,
@@ -6359,7 +6352,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Bug",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "furyswipes": {
     "num": 154,
@@ -6398,11 +6392,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Electric",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "fusionflare": {
     "num": 558,
@@ -6417,11 +6411,11 @@
       "mirror": 1,
       "defrost": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fire",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "futuresight": {
     "num": 248,
@@ -6436,11 +6430,11 @@
       "futuremove": 1
     },
     "ignoreImmunity": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "gastroacid": {
     "num": 380,
@@ -6457,7 +6451,6 @@
       "allyanim": 1
     },
     "volatileStatus": "gastroacid",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Poison",
@@ -6466,7 +6459,8 @@
         "spe": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "geargrind": {
     "num": 544,
@@ -6507,7 +6501,6 @@
       "snatch": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Steel",
@@ -6516,7 +6509,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "genesissupernova": {
     "num": 703,
@@ -6531,13 +6525,12 @@
     "isZ": "mewniumz",
     "secondary": {
       "chance": 100,
-      "self": {
-        "callback": true
-      }
+      "self": {}
     },
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "geomancy": {
     "num": 601,
@@ -6554,7 +6547,6 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "boosts": {
       "spa": 2,
       "spd": 2,
@@ -6572,7 +6564,8 @@
         "spe": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "gigadrain": {
     "num": 202,
@@ -6705,10 +6698,10 @@
     "self": {
       "volatileStatus": "glaiverush"
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Dragon"
+    "type": "Dragon",
+    "callback": true
   },
   "glare": {
     "num": 137,
@@ -6766,12 +6759,11 @@
     "priority": 0,
     "flags": {},
     "isMax": "Butterfree",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Bug",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxcannonade": {
     "num": 1000,
@@ -6784,14 +6776,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Blastoise",
-    "self": {
-      "callback": true
-    },
-    "callback": true,
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Water",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxcentiferno": {
     "num": 1000,
@@ -6804,13 +6794,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Centiskorch",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Fire",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxchistrike": {
     "num": 1000,
@@ -6823,14 +6812,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Machamp",
-    "self": {
-      "callback": true
-    },
-    "callback": true,
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Fighting",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxcuddle": {
     "num": 1000,
@@ -6843,13 +6830,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Eevee",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxdepletion": {
     "num": 1000,
@@ -6862,13 +6848,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Duraludon",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Dragon",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxdrumsolo": {
     "num": 1000,
@@ -6898,13 +6883,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Alcremie",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Fairy",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxfireball": {
     "num": 1000,
@@ -6934,13 +6918,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Kingler",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Water",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxgoldrush": {
     "num": 1000,
@@ -6953,13 +6936,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Meowth",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxgravitas": {
     "num": 1000,
@@ -7007,12 +6989,11 @@
     "priority": 0,
     "flags": {},
     "isMax": "Garbodor",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Poison",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxmeltdown": {
     "num": 1000,
@@ -7025,13 +7006,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Melmetal",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Steel",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxoneblow": {
     "num": 1000,
@@ -7076,13 +7056,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Snorlax",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxresonance": {
     "num": 1000,
@@ -7114,13 +7093,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Sandaconda",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Ground",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxsmite": {
     "num": 1000,
@@ -7133,13 +7111,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Hatterene",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Fairy",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxsnooze": {
     "num": 1000,
@@ -7152,11 +7129,11 @@
     "priority": 0,
     "flags": {},
     "isMax": "Grimmsnarl",
-    "callback": true,
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Dark",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxsteelsurge": {
     "num": 1000,
@@ -7169,14 +7146,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Copperajah",
-    "self": {
-      "callback": true
-    },
-    "callback": true,
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Steel",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxstonesurge": {
     "num": 1000,
@@ -7189,13 +7164,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Drednaw",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Water",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxstunshock": {
     "num": 1000,
@@ -7208,13 +7182,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Toxtricity",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Electric",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxsweetness": {
     "num": 1000,
@@ -7227,13 +7200,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Appletun",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxtartness": {
     "num": 1000,
@@ -7246,13 +7218,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Flapple",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxterror": {
     "num": 1000,
@@ -7265,13 +7236,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Gengar",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Ghost",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxvinelash": {
     "num": 1000,
@@ -7284,14 +7254,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Venusaur",
-    "self": {
-      "callback": true
-    },
-    "callback": true,
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxvolcalith": {
     "num": 1000,
@@ -7304,14 +7272,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Coalossal",
-    "self": {
-      "callback": true
-    },
-    "callback": true,
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Rock",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxvoltcrash": {
     "num": 1000,
@@ -7324,13 +7290,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Pikachu",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Electric",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxwildfire": {
     "num": 1000,
@@ -7343,14 +7308,12 @@
     "priority": 0,
     "flags": {},
     "isMax": "Charizard",
-    "self": {
-      "callback": true
-    },
-    "callback": true,
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Fire",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "gmaxwindrage": {
     "num": 1000,
@@ -7363,19 +7326,17 @@
     "priority": 0,
     "flags": {},
     "isMax": "Corviknight",
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Flying",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "grassknot": {
     "num": 447,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "name": "Grass Knot",
     "pp": 20,
@@ -7395,13 +7356,13 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "grasspledge": {
     "num": 520,
     "accuracy": 100,
     "basePower": 80,
-    "callback": true,
     "category": "Special",
     "name": "Grass Pledge",
     "pp": 10,
@@ -7415,7 +7376,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Grass",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "grasswhistle": {
     "num": 320,
@@ -7457,11 +7419,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "grassyterrain": {
     "num": 580,
@@ -7475,7 +7437,6 @@
       "nonsky": 1
     },
     "terrain": "grassyterrain",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Grass",
@@ -7484,7 +7445,8 @@
         "def": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "gravapple": {
     "num": 788,
@@ -7498,7 +7460,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "boosts": {
@@ -7506,7 +7467,8 @@
       }
     },
     "target": "normal",
-    "type": "Grass"
+    "type": "Grass",
+    "callback": true
   },
   "gravity": {
     "num": 356,
@@ -7520,7 +7482,6 @@
       "nonsky": 1
     },
     "pseudoWeather": "gravity",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Psychic",
@@ -7529,7 +7490,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "growl": {
     "num": 45,
@@ -7570,7 +7532,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "boosts": {
       "atk": 1,
       "spa": 1
@@ -7583,7 +7544,8 @@
         "spa": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "grudge": {
     "num": 288,
@@ -7598,20 +7560,19 @@
       "bypasssub": 1
     },
     "volatileStatus": "grudge",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Ghost",
     "zMove": {
       "effect": "redirect"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "guardianofalola": {
     "num": 698,
     "accuracy": true,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "isNonstandard": "Past",
     "name": "Guardian of Alola",
@@ -7622,7 +7583,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Fairy",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "guardsplit": {
     "num": 470,
@@ -7636,7 +7598,6 @@
       "protect": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -7645,7 +7606,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "guardswap": {
     "num": 385,
@@ -7661,7 +7623,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -7670,7 +7631,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "guillotine": {
     "num": 12,
@@ -7740,7 +7702,6 @@
     "num": 360,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Gyro Ball",
     "pp": 5,
@@ -7760,7 +7721,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "hail": {
     "num": 258,
@@ -7816,7 +7778,6 @@
     "pp": 30,
     "priority": 0,
     "flags": {},
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Normal",
@@ -7829,7 +7790,8 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "harden": {
     "num": 106,
@@ -7859,7 +7821,6 @@
     "num": 912,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Hard Press",
     "pp": 10,
@@ -7871,7 +7832,8 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Steel"
+    "type": "Steel",
+    "callback": true
   },
   "haze": {
     "num": 114,
@@ -7884,14 +7846,14 @@
     "flags": {
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Ice",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "headbutt": {
     "num": 29,
@@ -7997,13 +7959,13 @@
       "distance": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "target": "allyTeam",
     "type": "Normal",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "healblock": {
     "num": 377,
@@ -8020,7 +7982,6 @@
       "mirror": 1
     },
     "volatileStatus": "healblock",
-    "callback": true,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Psychic",
@@ -8029,7 +7990,8 @@
         "spa": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "healingwish": {
     "num": 361,
@@ -8043,13 +8005,13 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "selfdestruct": "ifHit",
     "slotCondition": "healingwish",
     "secondary": null,
     "target": "self",
     "type": "Psychic",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "healorder": {
     "num": 456,
@@ -8092,14 +8054,14 @@
       "heal": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "any",
     "type": "Psychic",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "heartstamp": {
     "num": 531,
@@ -8137,20 +8099,19 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
     "zMove": {
       "effect": "crit2"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "heatcrash": {
     "num": 535,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Heat Crash",
     "pp": 10,
@@ -8170,7 +8131,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "heatwave": {
     "num": 257,
@@ -8197,7 +8159,6 @@
     "num": 484,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Heavy Slam",
     "pp": 10,
@@ -8217,7 +8178,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "helpinghand": {
     "num": 270,
@@ -8233,20 +8195,19 @@
       "failcopycat": 1
     },
     "volatileStatus": "helpinghand",
-    "callback": true,
     "secondary": null,
     "target": "adjacentAlly",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "hex": {
     "num": 506,
     "accuracy": 100,
     "basePower": 65,
-    "callback": true,
     "category": "Special",
     "name": "Hex",
     "pp": 10,
@@ -8261,7 +8222,8 @@
     "zMove": {
       "basePower": 160
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "hiddenpower": {
     "num": 237,
@@ -8276,11 +8238,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "hiddenpowerbug": {
     "num": 237,
@@ -8619,11 +8581,11 @@
       "gravity": 1
     },
     "hasCrashDamage": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "holdback": {
     "num": 610,
@@ -8639,11 +8601,11 @@
       "mirror": 1
     },
     "onDamagePriority": -20,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "holdhands": {
     "num": 607,
@@ -8805,14 +8767,14 @@
       "distance": 1,
       "wind": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "volatileStatus": "confusion"
     },
     "target": "any",
     "type": "Flying",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "hydrocannon": {
     "num": 308,
@@ -8960,7 +8922,6 @@
       "bypasssub": 1
     },
     "breaksProtect": true,
-    "callback": true,
     "self": {
       "boosts": {
         "def": -1
@@ -8970,7 +8931,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "hyperspacehole": {
     "num": 593,
@@ -9037,7 +8999,6 @@
     "num": 301,
     "accuracy": 90,
     "basePower": 30,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Ice Ball",
@@ -9054,7 +9015,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Ice",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "icebeam": {
     "num": 58,
@@ -9091,14 +9053,14 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "status": "brn"
     },
     "target": "normal",
     "type": "Ice",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "icefang": {
     "num": 423,
@@ -9204,10 +9166,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Ice"
+    "type": "Ice",
+    "callback": true
   },
   "iciclecrash": {
     "num": 556,
@@ -9293,7 +9255,6 @@
       "mustpressure": 1
     },
     "volatileStatus": "imprison",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Psychic",
@@ -9302,7 +9263,8 @@
         "spd": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "incinerate": {
     "num": 510,
@@ -9316,17 +9278,16 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Fire",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "infernalparade": {
     "num": 844,
     "accuracy": 100,
     "basePower": 60,
-    "callback": true,
     "category": "Special",
     "name": "Infernal Parade",
     "pp": 15,
@@ -9340,7 +9301,8 @@
       "status": "brn"
     },
     "target": "normal",
-    "type": "Ghost"
+    "type": "Ghost",
+    "callback": true
   },
   "inferno": {
     "num": 517,
@@ -9410,7 +9372,6 @@
       "nonsky": 1
     },
     "volatileStatus": "ingrain",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Grass",
@@ -9419,7 +9380,8 @@
         "spd": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "instruct": {
     "num": 689,
@@ -9435,7 +9397,6 @@
       "allyanim": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -9444,7 +9405,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "iondeluge": {
     "num": 569,
@@ -9457,7 +9419,6 @@
     "priority": 1,
     "flags": {},
     "pseudoWeather": "iondeluge",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Electric",
@@ -9466,7 +9427,8 @@
         "spa": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "irondefense": {
     "num": 334,
@@ -9547,10 +9509,10 @@
       "mirror": 1
     },
     "critRatio": 2,
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Grass"
+    "type": "Grass",
+    "callback": true
   },
   "jawlock": {
     "num": 746,
@@ -9566,10 +9528,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Dark"
+    "type": "Dark",
+    "callback": true
   },
   "jetpunch": {
     "num": 857,
@@ -9602,11 +9564,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "jumpkick": {
     "num": 26,
@@ -9624,11 +9586,11 @@
       "gravity": 1
     },
     "hasCrashDamage": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "junglehealing": {
     "num": 816,
@@ -9643,10 +9605,10 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allies",
-    "type": "Grass"
+    "type": "Grass",
+    "callback": true
   },
   "karatechop": {
     "num": 2,
@@ -9711,14 +9673,14 @@
     },
     "stallingMove": true,
     "volatileStatus": "kingsshield",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Steel",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "knockoff": {
     "num": 282,
@@ -9733,11 +9695,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "kowtowcleave": {
     "num": 869,
@@ -9792,7 +9754,6 @@
       "snatch": 1
     },
     "volatileStatus": "laserfocus",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -9801,7 +9762,8 @@
         "atk": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "lashout": {
     "num": 808,
@@ -9816,10 +9778,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Dark"
+    "type": "Dark",
+    "callback": true
   },
   "lastresort": {
     "num": 387,
@@ -9834,17 +9796,16 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "lastrespects": {
     "num": 854,
     "accuracy": 100,
     "basePower": 50,
-    "callback": true,
     "category": "Physical",
     "name": "Last Respects",
     "pp": 10,
@@ -9855,7 +9816,8 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Ghost"
+    "type": "Ghost",
+    "callback": true
   },
   "lavaplume": {
     "num": 436,
@@ -9996,14 +9958,14 @@
       "mirror": 1
     },
     "volatileStatus": "leechseed",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "leer": {
     "num": 43,
@@ -10125,7 +10087,6 @@
       "snatch": 1
     },
     "sideCondition": "lightscreen",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Psychic",
@@ -10134,7 +10095,8 @@
         "spd": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "lightthatburnsthesky": {
     "num": 723,
@@ -10146,13 +10108,13 @@
     "pp": 1,
     "priority": 0,
     "flags": {},
-    "callback": true,
     "ignoreAbility": true,
     "isZ": "ultranecroziumz",
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "liquidation": {
     "num": 710,
@@ -10189,7 +10151,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -10198,7 +10159,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "lovelykiss": {
     "num": 142,
@@ -10229,7 +10191,6 @@
     "num": 67,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Low Kick",
     "pp": 20,
@@ -10245,7 +10206,8 @@
     "zMove": {
       "basePower": 160
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "lowsweep": {
     "num": 490,
@@ -10283,7 +10245,6 @@
       "snatch": 1
     },
     "sideCondition": "luckychant",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Normal",
@@ -10292,7 +10253,8 @@
         "evasion": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "luminacrash": {
     "num": 855,
@@ -10327,10 +10289,10 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allies",
-    "type": "Psychic"
+    "type": "Psychic",
+    "callback": true
   },
   "lunardance": {
     "num": 461,
@@ -10345,13 +10307,13 @@
       "heal": 1,
       "dance": 1
     },
-    "callback": true,
     "selfdestruct": "ifHit",
     "slotCondition": "lunardance",
     "secondary": null,
     "target": "self",
     "type": "Psychic",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "lunge": {
     "num": 679,
@@ -10472,7 +10434,6 @@
     "priority": 4,
     "flags": {},
     "volatileStatus": "magiccoat",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Psychic",
@@ -10481,7 +10442,8 @@
         "spd": 2
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "magicpowder": {
     "num": 750,
@@ -10498,10 +10460,10 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Psychic"
+    "type": "Psychic",
+    "callback": true
   },
   "magicroom": {
     "num": 478,
@@ -10515,7 +10477,6 @@
       "mirror": 1
     },
     "pseudoWeather": "magicroom",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Psychic",
@@ -10524,7 +10485,8 @@
         "spd": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "magmastorm": {
     "num": 463,
@@ -10576,7 +10538,6 @@
       "distance": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Electric",
@@ -10585,7 +10546,8 @@
         "spd": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "magnetrise": {
     "num": 393,
@@ -10600,7 +10562,6 @@
       "gravity": 1
     },
     "volatileStatus": "magnetrise",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Electric",
@@ -10609,7 +10570,8 @@
         "evasion": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "magnitude": {
     "num": 222,
@@ -10625,7 +10587,6 @@
       "mirror": 1,
       "nonsky": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacent",
     "type": "Ground",
@@ -10635,7 +10596,8 @@
     "maxMove": {
       "basePower": 140
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "makeitrain": {
     "num": 874,
@@ -10714,7 +10676,6 @@
     },
     "stallingMove": true,
     "sideCondition": "matblock",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Fighting",
@@ -10723,7 +10684,8 @@
         "def": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "matchagotcha": {
     "num": 902,
@@ -10762,12 +10724,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Flying",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxdarkness": {
     "num": 772,
@@ -10780,12 +10741,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Dark",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxflare": {
     "num": 757,
@@ -10798,12 +10758,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Fire",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxflutterby": {
     "num": 758,
@@ -10816,12 +10775,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Bug",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxgeyser": {
     "num": 765,
@@ -10834,12 +10792,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Water",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxguard": {
     "num": 743,
@@ -10854,11 +10811,11 @@
     "isMax": true,
     "stallingMove": true,
     "volatileStatus": "maxguard",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxhailstorm": {
     "num": 763,
@@ -10871,12 +10828,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Ice",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxknuckle": {
     "num": 761,
@@ -10889,12 +10845,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Fighting",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxlightning": {
     "num": 759,
@@ -10907,12 +10862,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Electric",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxmindstorm": {
     "num": 769,
@@ -10925,12 +10879,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Psychic",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxooze": {
     "num": 764,
@@ -10943,12 +10896,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Poison",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxovergrowth": {
     "num": 773,
@@ -10961,12 +10913,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxphantasm": {
     "num": 762,
@@ -10979,12 +10930,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Ghost",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxquake": {
     "num": 771,
@@ -10997,12 +10947,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Ground",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxrockfall": {
     "num": 770,
@@ -11015,12 +10964,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Rock",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxstarfall": {
     "num": 767,
@@ -11033,12 +10981,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Fairy",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxsteelspike": {
     "num": 774,
@@ -11051,12 +10998,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Steel",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxstrike": {
     "num": 760,
@@ -11069,12 +11015,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "maxwyrmwind": {
     "num": 768,
@@ -11087,12 +11032,11 @@
     "priority": 0,
     "flags": {},
     "isMax": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "target": "adjacentFoe",
     "type": "Dragon",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "meanlook": {
     "num": 212,
@@ -11106,7 +11050,6 @@
       "reflectable": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -11115,7 +11058,8 @@
         "spd": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "meditate": {
     "num": 96,
@@ -11162,7 +11106,6 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "adjacentFoe",
     "type": "Normal",
@@ -11171,7 +11114,8 @@
         "spe": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "megadrain": {
     "num": 72,
@@ -11299,7 +11243,6 @@
     "num": 368,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Metal Burst",
     "pp": 10,
@@ -11312,7 +11255,8 @@
     "secondary": null,
     "target": "scripted",
     "type": "Steel",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "metalclaw": {
     "num": 232,
@@ -11403,10 +11347,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Rock"
+    "type": "Rock",
+    "callback": true
   },
   "meteormash": {
     "num": 309,
@@ -11593,11 +11537,11 @@
       "Wicked Torque",
       "Wide Guard"
     ],
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "mightycleave": {
     "num": 910,
@@ -11659,7 +11603,6 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -11668,7 +11611,8 @@
         "accuracy": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "mindblown": {
     "num": 720,
@@ -11684,11 +11628,11 @@
       "mirror": 1
     },
     "mindBlownRecoil": true,
-    "callback": true,
     "secondary": null,
     "target": "allAdjacent",
     "type": "Fire",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "mindreader": {
     "num": 170,
@@ -11703,7 +11647,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -11712,7 +11655,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "minimize": {
     "num": 107,
@@ -11726,7 +11670,6 @@
       "snatch": 1
     },
     "volatileStatus": "minimize",
-    "callback": true,
     "boosts": {
       "evasion": 2
     },
@@ -11736,7 +11679,8 @@
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "miracleeye": {
     "num": 357,
@@ -11754,7 +11698,6 @@
       "bypasssub": 1
     },
     "volatileStatus": "miracleeye",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -11763,13 +11706,13 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "mirrorcoat": {
     "num": 243,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "name": "Mirror Coat",
     "pp": 20,
@@ -11782,7 +11725,8 @@
     "secondary": null,
     "target": "scripted",
     "type": "Psychic",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "mirrormove": {
     "num": 119,
@@ -11801,7 +11745,6 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Flying",
@@ -11810,7 +11753,8 @@
         "atk": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "mirrorshot": {
     "num": 429,
@@ -11847,14 +11791,14 @@
       "snatch": 1
     },
     "sideCondition": "mist",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Ice",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "mistball": {
     "num": 296,
@@ -11892,10 +11836,10 @@
       "mirror": 1
     },
     "selfdestruct": "always",
-    "callback": true,
     "secondary": null,
     "target": "allAdjacent",
-    "type": "Fairy"
+    "type": "Fairy",
+    "callback": true
   },
   "mistyterrain": {
     "num": 581,
@@ -11909,7 +11853,6 @@
       "nonsky": 1
     },
     "terrain": "mistyterrain",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Fairy",
@@ -11918,7 +11861,8 @@
         "spd": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "moonblast": {
     "num": 585,
@@ -11972,14 +11916,14 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Fairy",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "morningsun": {
     "num": 234,
@@ -11993,14 +11937,14 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "mortalspin": {
     "num": 866,
@@ -12015,13 +11959,13 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "status": "psn"
     },
     "target": "allAdjacentFoes",
-    "type": "Poison"
+    "type": "Poison",
+    "callback": true
   },
   "mountaingale": {
     "num": 836,
@@ -12123,7 +12067,6 @@
       "nonsky": 1
     },
     "pseudoWeather": "mudsport",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Ground",
@@ -12132,7 +12075,8 @@
         "spd": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "muddywater": {
     "num": 330,
@@ -12171,7 +12115,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -12181,7 +12124,8 @@
     "maxMove": {
       "basePower": 95
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "mysticalfire": {
     "num": 595,
@@ -12263,7 +12207,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -12273,7 +12216,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "naturepower": {
     "num": 267,
@@ -12292,17 +12236,16 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "naturesmadness": {
     "num": 717,
     "accuracy": 90,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "isNonstandard": "Past",
     "name": "Nature's Madness",
@@ -12315,7 +12258,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Fairy",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "needlearm": {
     "num": 302,
@@ -12391,7 +12335,6 @@
       "mirror": 1
     },
     "volatileStatus": "nightmare",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ghost",
@@ -12400,7 +12343,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "nightshade": {
     "num": 101,
@@ -12481,7 +12425,6 @@
       "snatch": 1
     },
     "volatileStatus": "noretreat",
-    "callback": true,
     "boosts": {
       "atk": 1,
       "def": 1,
@@ -12491,7 +12434,8 @@
     },
     "secondary": null,
     "target": "self",
-    "type": "Fighting"
+    "type": "Fighting",
+    "callback": true
   },
   "noxioustorque": {
     "num": 898,
@@ -12579,10 +12523,10 @@
     },
     "stallingMove": true,
     "volatileStatus": "obstruct",
-    "callback": true,
     "secondary": null,
     "target": "self",
-    "type": "Dark"
+    "type": "Dark",
+    "callback": true
   },
   "oceanicoperetta": {
     "num": 697,
@@ -12637,11 +12581,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "volatileStatus": "octolock",
     "secondary": null,
     "target": "normal",
-    "type": "Fighting"
+    "type": "Fighting",
+    "callback": true
   },
   "odorsleuth": {
     "num": 316,
@@ -12660,7 +12604,6 @@
       "allyanim": 1
     },
     "volatileStatus": "foresight",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -12669,7 +12612,8 @@
         "atk": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "ominouswind": {
     "num": 466,
@@ -12711,11 +12655,11 @@
     "flags": {
       "protect": 1
     },
-    "callback": true,
     "secondary": null,
     "hasSheerForce": true,
     "target": "normal",
-    "type": "Dragon"
+    "type": "Dragon",
+    "callback": true
   },
   "originpulse": {
     "num": 618,
@@ -12751,11 +12695,11 @@
     "self": {
       "volatileStatus": "lockedmove"
     },
-    "callback": true,
     "secondary": null,
     "target": "randomNormal",
     "type": "Dragon",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "overdrive": {
     "num": 786,
@@ -12810,7 +12754,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -12819,7 +12762,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "paleowave": {
     "num": 0,
@@ -12881,7 +12825,6 @@
       "sound": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "selfSwitch": true,
     "secondary": null,
     "target": "normal",
@@ -12889,13 +12832,13 @@
     "zMove": {
       "effect": "healreplacement"
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "payback": {
     "num": 371,
     "accuracy": 100,
     "basePower": 50,
-    "callback": true,
     "category": "Physical",
     "name": "Payback",
     "pp": 10,
@@ -12908,7 +12851,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "payday": {
     "num": 6,
@@ -12959,14 +12903,14 @@
       "distance": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "petalblizzard": {
     "num": 572,
@@ -13004,11 +12948,11 @@
     "self": {
       "volatileStatus": "lockedmove"
     },
-    "callback": true,
     "secondary": null,
     "target": "randomNormal",
     "type": "Grass",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "phantomforce": {
     "num": 566,
@@ -13027,11 +12971,11 @@
       "failinstruct": 1
     },
     "breaksProtect": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ghost",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "photongeyser": {
     "num": 722,
@@ -13045,18 +12989,17 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "ignoreAbility": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "pikapapow": {
     "num": 732,
     "accuracy": true,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "isNonstandard": "LGPE",
     "name": "Pika Papow",
@@ -13069,7 +13012,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Electric",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "pinmissile": {
     "num": 42,
@@ -13182,11 +13126,11 @@
       "mirror": 1,
       "distance": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "any",
     "type": "Flying",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "poisonfang": {
     "num": 305,
@@ -13336,11 +13280,11 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Bug",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "poltergeist": {
     "num": 809,
@@ -13354,10 +13298,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Ghost"
+    "type": "Ghost",
+    "callback": true
   },
   "populationbomb": {
     "num": 860,
@@ -13437,7 +13381,6 @@
       "bypasssub": 1
     },
     "volatileStatus": "powder",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Bug",
@@ -13446,7 +13389,8 @@
         "spd": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "powdersnow": {
     "num": 181,
@@ -13498,10 +13442,10 @@
       "snatch": 1
     },
     "volatileStatus": "powershift",
-    "callback": true,
     "secondary": null,
     "target": "self",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "powersplit": {
     "num": 471,
@@ -13515,7 +13459,6 @@
       "protect": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -13524,7 +13467,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "powerswap": {
     "num": 384,
@@ -13540,7 +13484,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -13549,7 +13492,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "powertrick": {
     "num": 379,
@@ -13563,7 +13507,6 @@
       "snatch": 1
     },
     "volatileStatus": "powertrick",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Psychic",
@@ -13572,13 +13515,13 @@
         "atk": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "powertrip": {
     "num": 681,
     "accuracy": 100,
     "basePower": 20,
-    "callback": true,
     "category": "Physical",
     "name": "Power Trip",
     "pp": 10,
@@ -13597,7 +13540,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "poweruppunch": {
     "num": 612,
@@ -13673,11 +13617,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "prismaticlaser": {
     "num": 711,
@@ -13714,14 +13658,14 @@
     },
     "stallingMove": true,
     "volatileStatus": "protect",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "psybeam": {
     "num": 60,
@@ -13758,9 +13702,9 @@
       "slicing": 1
     },
     "secondary": null,
-    "callback": true,
     "target": "normal",
-    "type": "Psychic"
+    "type": "Psychic",
+    "callback": true
   },
   "psychup": {
     "num": 244,
@@ -13774,14 +13718,14 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "psychic": {
     "num": 94,
@@ -13819,11 +13763,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "psychicnoise": {
     "num": 917,
@@ -13858,7 +13802,6 @@
       "nonsky": 1
     },
     "terrain": "psychicterrain",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Psychic",
@@ -13867,7 +13810,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "psychoboost": {
     "num": 354,
@@ -13923,10 +13867,7 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -13935,7 +13876,8 @@
         "spa": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "psyshieldbash": {
     "num": 828,
@@ -14001,7 +13943,6 @@
     "num": 149,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "isNonstandard": "Past",
     "name": "Psywave",
@@ -14014,7 +13955,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "pulverizingpancake": {
     "num": 701,
@@ -14038,7 +13980,6 @@
     "num": 386,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Punishment",
@@ -14058,7 +13999,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "purify": {
     "num": 685,
@@ -14074,7 +14016,6 @@
       "reflectable": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Poison",
@@ -14087,13 +14028,13 @@
         "spe": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "pursuit": {
     "num": 228,
     "accuracy": 100,
     "basePower": 40,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Pursuit",
@@ -14107,7 +14048,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "pyroball": {
     "num": 780,
@@ -14142,7 +14084,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
@@ -14151,7 +14092,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "quickattack": {
     "num": 98,
@@ -14183,7 +14125,6 @@
       "snatch": 1
     },
     "sideCondition": "quickguard",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Fighting",
@@ -14192,7 +14133,8 @@
         "def": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "quiverdance": {
     "num": 483,
@@ -14236,17 +14178,16 @@
     "self": {
       "volatileStatus": "rage"
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "ragefist": {
     "num": 889,
     "accuracy": 100,
     "basePower": 50,
-    "callback": true,
     "category": "Physical",
     "name": "Rage Fist",
     "pp": 10,
@@ -14259,7 +14200,8 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Ghost"
+    "type": "Ghost",
+    "callback": true
   },
   "ragepowder": {
     "num": 476,
@@ -14275,14 +14217,14 @@
       "failcopycat": 1
     },
     "volatileStatus": "ragepowder",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Bug",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "ragingbull": {
     "num": 873,
@@ -14297,10 +14239,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "ragingfury": {
     "num": 833,
@@ -14317,10 +14259,10 @@
     "self": {
       "volatileStatus": "lockedmove"
     },
-    "callback": true,
     "secondary": null,
     "target": "randomNormal",
-    "type": "Fire"
+    "type": "Fire",
+    "callback": true
   },
   "raindance": {
     "num": 240,
@@ -14355,7 +14297,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "self": {
@@ -14366,7 +14307,8 @@
     },
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "razorleaf": {
     "num": 75,
@@ -14427,12 +14369,12 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "critRatio": 2,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "recover": {
     "num": 105,
@@ -14469,7 +14411,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -14478,7 +14419,8 @@
         "spe": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "reflect": {
     "num": 115,
@@ -14492,7 +14434,6 @@
       "snatch": 1
     },
     "sideCondition": "reflect",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Psychic",
@@ -14501,7 +14442,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "reflecttype": {
     "num": 513,
@@ -14516,7 +14458,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -14525,7 +14466,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "refresh": {
     "num": 287,
@@ -14539,14 +14481,14 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "relicsong": {
     "num": 547,
@@ -14566,10 +14508,10 @@
       "chance": 10,
       "status": "slp"
     },
-    "callback": true,
     "target": "allAdjacentFoes",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "rest": {
     "num": 156,
@@ -14583,14 +14525,14 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Psychic",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "retaliate": {
     "num": 514,
@@ -14605,17 +14547,16 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "return": {
     "num": 216,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Return",
@@ -14635,7 +14576,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "revelationdance": {
     "num": 686,
@@ -14650,17 +14592,16 @@
       "mirror": 1,
       "dance": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "revenge": {
     "num": 279,
     "accuracy": 100,
     "basePower": 60,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Revenge",
@@ -14674,13 +14615,13 @@
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "reversal": {
     "num": 179,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Reversal",
     "pp": 15,
@@ -14696,7 +14637,8 @@
     "zMove": {
       "basePower": 160
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "revivalblessing": {
     "num": 863,
@@ -14710,19 +14652,18 @@
     "flags": {
       "heal": 1
     },
-    "callback": true,
     "slotCondition": "revivalblessing",
     "selfSwitch": true,
     "noSketch": true,
     "secondary": null,
     "target": "self",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "risingvoltage": {
     "num": 804,
     "accuracy": 100,
     "basePower": 70,
-    "callback": true,
     "category": "Special",
     "name": "Rising Voltage",
     "pp": 20,
@@ -14736,7 +14677,8 @@
     "type": "Electric",
     "maxMove": {
       "basePower": 140
-    }
+    },
+    "callback": true
   },
   "roar": {
     "num": 46,
@@ -14975,7 +14917,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -14984,7 +14925,8 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "rollingkick": {
     "num": 27,
@@ -15012,7 +14954,6 @@
     "num": 205,
     "accuracy": 90,
     "basePower": 30,
-    "callback": true,
     "category": "Physical",
     "name": "Rollout",
     "pp": 20,
@@ -15027,7 +14968,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Rock",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "roost": {
     "num": 355,
@@ -15048,14 +14990,14 @@
     "self": {
       "volatileStatus": "roost"
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Flying",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "rototiller": {
     "num": 563,
@@ -15070,7 +15012,6 @@
       "distance": 1,
       "nonsky": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Ground",
@@ -15079,13 +15020,13 @@
         "atk": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "round": {
     "num": 496,
     "accuracy": 100,
     "basePower": 60,
-    "callback": true,
     "category": "Special",
     "name": "Round",
     "pp": 15,
@@ -15099,13 +15040,13 @@
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "ruination": {
     "num": 877,
     "accuracy": 90,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "name": "Ruination",
     "pp": 10,
@@ -15117,7 +15058,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "sacredfire": {
     "num": 221,
@@ -15173,7 +15115,6 @@
       "snatch": 1
     },
     "sideCondition": "safeguard",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Normal",
@@ -15182,7 +15123,8 @@
         "spe": 1
       }
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "saltcure": {
     "num": 864,
@@ -15196,13 +15138,13 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "volatileStatus": "saltcure"
     },
     "target": "normal",
-    "type": "Rock"
+    "type": "Rock",
+    "callback": true
   },
   "sandattack": {
     "num": 28,
@@ -15243,13 +15185,13 @@
       "mirror": 1,
       "wind": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 20,
       "status": "brn"
     },
     "target": "allAdjacentFoes",
-    "type": "Ground"
+    "type": "Ground",
+    "callback": true
   },
   "sandstorm": {
     "num": 201,
@@ -15305,11 +15247,11 @@
       "reflectable": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "savagespinout": {
     "num": 634,
@@ -15530,14 +15472,14 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "status": "par"
     },
     "target": "normal",
     "type": "Normal",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "secretsword": {
     "num": 548,
@@ -15722,11 +15664,11 @@
       "failinstruct": 1
     },
     "breaksProtect": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ghost",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "shadowpunch": {
     "num": 325,
@@ -15840,17 +15782,15 @@
     "priority": 0,
     "flags": {},
     "volatileStatus": "substitute",
-    "callback": true,
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "selfSwitch": "shedtail",
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
-    }
+    },
+    "callback": true
   },
   "sheercold": {
     "num": 329,
@@ -15888,13 +15828,13 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 20,
       "status": "psn"
     },
     "target": "normal",
-    "type": "Poison"
+    "type": "Poison",
+    "callback": true
   },
   "shellsmash": {
     "num": 504,
@@ -15939,11 +15879,11 @@
       "failcopycat": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Fire",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "shelter": {
     "num": 842,
@@ -16015,14 +15955,14 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Ground",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "signalbeam": {
     "num": 324,
@@ -16056,9 +15996,9 @@
     "flags": {},
     "stallingMove": true,
     "volatileStatus": "silktrap",
-    "callback": true,
     "target": "self",
-    "type": "Bug"
+    "type": "Bug",
+    "callback": true
   },
   "silverwind": {
     "num": 318,
@@ -16103,7 +16043,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -16112,7 +16051,8 @@
         "spa": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "sing": {
     "num": 47,
@@ -16198,7 +16138,6 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "noSketch": true,
     "secondary": null,
     "target": "normal",
@@ -16212,7 +16151,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "skillswap": {
     "num": 285,
@@ -16228,7 +16168,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -16237,7 +16176,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "skittersmack": {
     "num": 806,
@@ -16278,11 +16218,11 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "skyattack": {
     "num": 143,
@@ -16301,14 +16241,14 @@
       "failinstruct": 1
     },
     "critRatio": 2,
-    "callback": true,
     "secondary": {
       "chance": 30,
       "volatileStatus": "flinch"
     },
     "target": "any",
     "type": "Flying",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "skydrop": {
     "num": 507,
@@ -16330,11 +16270,11 @@
       "noassist": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "any",
     "type": "Flying",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "skyuppercut": {
     "num": 327,
@@ -16461,14 +16401,14 @@
       "failmimic": 1
     },
     "sleepUsable": true,
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "crit2"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "sludge": {
     "num": 124,
@@ -16545,11 +16485,11 @@
       "nonsky": 1
     },
     "volatileStatus": "smackdown",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Rock",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "smartstrike": {
     "num": 684,
@@ -16573,7 +16513,6 @@
     "num": 265,
     "accuracy": 100,
     "basePower": 70,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Smelling Salts",
@@ -16587,7 +16526,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "smog": {
     "num": 123,
@@ -16694,7 +16634,6 @@
       "failcopycat": 1
     },
     "volatileStatus": "snatch",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Dark",
@@ -16703,7 +16642,8 @@
         "spe": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "snipeshot": {
     "num": 745,
@@ -16738,14 +16678,14 @@
       "bypasssub": 1
     },
     "sleepUsable": true,
-    "callback": true,
     "secondary": {
       "chance": 30,
       "volatileStatus": "flinch"
     },
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "snowscape": {
     "num": 883,
@@ -16775,7 +16715,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Water",
@@ -16784,7 +16723,8 @@
         "spa": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "softboiled": {
     "num": 135,
@@ -16825,11 +16765,11 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "solarblade": {
     "num": 669,
@@ -16848,11 +16788,11 @@
       "nosleeptalk": 1,
       "failinstruct": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "sonicboom": {
     "num": 49,
@@ -16949,10 +16889,10 @@
       "chance": 100,
       "volatileStatus": "sparklingaria"
     },
-    "callback": true,
     "target": "allAdjacent",
     "type": "Water",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "sparklyswirl": {
     "num": 740,
@@ -16967,13 +16907,12 @@
       "protect": 1,
       "mirror": 1
     },
-    "self": {
-      "callback": true
-    },
+    "self": {},
     "secondary": null,
     "target": "normal",
     "type": "Fairy",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "spectralthief": {
     "num": 712,
@@ -17010,7 +16949,6 @@
       "bypasssub": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -17019,7 +16957,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "spicyextract": {
     "num": 858,
@@ -17056,7 +16995,6 @@
       "reflectable": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Bug",
@@ -17065,7 +17003,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "spikecannon": {
     "num": 131,
@@ -17106,7 +17045,6 @@
       "mustpressure": 1
     },
     "sideCondition": "spikes",
-    "callback": true,
     "secondary": null,
     "target": "foeSide",
     "type": "Ground",
@@ -17115,7 +17053,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "spikyshield": {
     "num": 596,
@@ -17131,7 +17070,6 @@
     },
     "stallingMove": true,
     "volatileStatus": "spikyshield",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Grass",
@@ -17140,7 +17078,8 @@
         "def": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "spinout": {
     "num": 859,
@@ -17199,18 +17138,17 @@
       "mirror": 1
     },
     "secondary": {
-      "chance": 100,
-      "callback": true
+      "chance": 100
     },
     "target": "normal",
     "type": "Ghost",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "spitup": {
     "num": 255,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "name": "Spit Up",
     "pp": 10,
@@ -17221,7 +17159,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "spite": {
     "num": 180,
@@ -17237,14 +17176,14 @@
       "mirror": 1,
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ghost",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "splash": {
     "num": 150,
@@ -17257,7 +17196,6 @@
     "flags": {
       "gravity": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -17266,7 +17204,8 @@
         "atk": 3
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "splinteredstormshards": {
     "num": 727,
@@ -17278,12 +17217,12 @@
     "pp": 1,
     "priority": 0,
     "flags": {},
-    "callback": true,
     "isZ": "lycaniumz",
     "secondary": null,
     "target": "normal",
     "type": "Rock",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "splishysplash": {
     "num": 730,
@@ -17346,7 +17285,6 @@
       "failcopycat": 1
     },
     "volatileStatus": "spotlight",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -17355,7 +17293,8 @@
         "spd": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "springtidestorm": {
     "num": 831,
@@ -17392,7 +17331,6 @@
       "mustpressure": 1
     },
     "sideCondition": "stealthrock",
-    "callback": true,
     "secondary": null,
     "target": "foeSide",
     "type": "Rock",
@@ -17401,7 +17339,8 @@
         "def": 1
       }
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "steameruption": {
     "num": 592,
@@ -17460,10 +17399,10 @@
       "mirror": 1
     },
     "mindBlownRecoil": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Steel"
+    "type": "Steel",
+    "callback": true
   },
   "steelroller": {
     "num": 798,
@@ -17478,10 +17417,10 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Steel"
+    "type": "Steel",
+    "callback": true
   },
   "steelwing": {
     "num": 211,
@@ -17520,7 +17459,6 @@
       "reflectable": 1
     },
     "sideCondition": "stickyweb",
-    "callback": true,
     "secondary": null,
     "target": "foeSide",
     "type": "Bug",
@@ -17529,7 +17467,8 @@
         "spe": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "stockpile": {
     "num": 254,
@@ -17542,7 +17481,6 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "volatileStatus": "stockpile",
     "secondary": null,
     "target": "self",
@@ -17550,7 +17488,8 @@
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "stokedsparksurfer": {
     "num": 700,
@@ -17597,7 +17536,6 @@
     "num": 707,
     "accuracy": 100,
     "basePower": 75,
-    "callback": true,
     "category": "Physical",
     "name": "Stomping Tantrum",
     "pp": 10,
@@ -17610,7 +17548,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Ground",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "stoneaxe": {
     "num": 830,
@@ -17626,10 +17565,10 @@
       "mirror": 1,
       "slicing": 1
     },
-    "callback": true,
     "secondary": {},
     "target": "normal",
-    "type": "Rock"
+    "type": "Rock",
+    "callback": true
   },
   "stoneedge": {
     "num": 444,
@@ -17653,7 +17592,6 @@
     "num": 500,
     "accuracy": 100,
     "basePower": 20,
-    "callback": true,
     "category": "Special",
     "name": "Stored Power",
     "pp": 10,
@@ -17671,7 +17609,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "stormthrow": {
     "num": 480,
@@ -17744,7 +17683,6 @@
       "mirror": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
@@ -17753,7 +17691,8 @@
         "def": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "stringshot": {
     "num": 81,
@@ -17802,12 +17741,12 @@
       "failmimic": 1
     },
     "noSketch": true,
-    "callback": true,
     "struggleRecoil": true,
     "secondary": null,
     "target": "randomNormal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "strugglebug": {
     "num": 522,
@@ -17842,10 +17781,10 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "stunspore": {
     "num": 78,
@@ -17908,14 +17847,14 @@
       "nonsky": 1
     },
     "volatileStatus": "substitute",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "subzeroslammer": {
     "num": 650,
@@ -17946,11 +17885,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "sunnyday": {
     "num": 241,
@@ -18005,16 +17944,15 @@
       "mirror": 1
     },
     "hasCrashDamage": true,
-    "callback": true,
     "secondary": null,
     "target": "normal",
-    "type": "Electric"
+    "type": "Electric",
+    "callback": true
   },
   "superfang": {
     "num": 162,
     "accuracy": 90,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "name": "Super Fang",
     "pp": 10,
@@ -18027,7 +17965,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "superpower": {
     "num": 276,
@@ -18177,14 +18116,14 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "sweetkiss": {
     "num": 186,
@@ -18268,7 +18207,6 @@
       "noassist": 1,
       "failcopycat": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
@@ -18277,7 +18215,8 @@
         "spe": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "swordsdance": {
     "num": 14,
@@ -18315,11 +18254,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacent",
     "type": "Psychic",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "synthesis": {
     "num": 235,
@@ -18333,14 +18272,14 @@
       "snatch": 1,
       "heal": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Grass",
     "zMove": {
       "effect": "clearnegativeboost"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "syrupbomb": {
     "num": 903,
@@ -18355,13 +18294,13 @@
       "mirror": 1,
       "bullet": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "volatileStatus": "syrupbomb"
     },
     "target": "normal",
-    "type": "Grass"
+    "type": "Grass",
+    "callback": true
   },
   "tachyoncutter": {
     "num": 911,
@@ -18495,14 +18434,14 @@
       "wind": 1
     },
     "sideCondition": "tailwind",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Flying",
     "zMove": {
       "effect": "crit2"
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "takedown": {
     "num": 36,
@@ -18537,10 +18476,10 @@
     "flags": {
       "snatch": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "self",
-    "type": "Psychic"
+    "type": "Psychic",
+    "callback": true
   },
   "tarshot": {
     "num": 749,
@@ -18556,13 +18495,13 @@
       "mirror": 1
     },
     "volatileStatus": "tarshot",
-    "callback": true,
     "boosts": {
       "spe": -1
     },
     "secondary": null,
     "target": "normal",
-    "type": "Rock"
+    "type": "Rock",
+    "callback": true
   },
   "taunt": {
     "num": 269,
@@ -18579,7 +18518,6 @@
       "bypasssub": 1
     },
     "volatileStatus": "taunt",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
@@ -18588,7 +18526,8 @@
         "atk": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "tearfullook": {
     "num": 715,
@@ -18627,10 +18566,10 @@
     "flags": {
       "bypasssub": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "all",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "technoblast": {
     "num": 546,
@@ -18645,11 +18584,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "tectonicrage": {
     "num": 630,
@@ -18708,7 +18647,6 @@
       "allyanim": 1
     },
     "volatileStatus": "telekinesis",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -18717,7 +18655,8 @@
         "spa": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "teleport": {
     "num": 100,
@@ -18728,7 +18667,6 @@
     "pp": 20,
     "priority": -6,
     "flags": {},
-    "callback": true,
     "selfSwitch": true,
     "secondary": null,
     "target": "self",
@@ -18736,13 +18674,13 @@
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "temperflare": {
     "num": 915,
     "accuracy": 100,
     "basePower": 75,
-    "callback": true,
     "category": "Physical",
     "name": "Temper Flare",
     "pp": 10,
@@ -18754,13 +18692,13 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Fire"
+    "type": "Fire",
+    "callback": true
   },
   "terablast": {
     "num": 851,
     "accuracy": 100,
     "basePower": 80,
-    "callback": true,
     "category": "Special",
     "name": "Tera Blast",
     "pp": 10,
@@ -18772,7 +18710,8 @@
     },
     "secondary": null,
     "target": "normal",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "terastarstorm": {
     "num": 906,
@@ -18789,11 +18728,11 @@
       "failcopycat": 1,
       "failmimic": 1
     },
-    "callback": true,
     "noSketch": true,
     "secondary": null,
     "target": "normal",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "terrainpulse": {
     "num": 805,
@@ -18808,7 +18747,6 @@
       "mirror": 1,
       "pulse": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -18817,7 +18755,8 @@
     },
     "maxMove": {
       "basePower": 130
-    }
+    },
+    "callback": true
   },
   "thief": {
     "num": 168,
@@ -18835,11 +18774,11 @@
       "noassist": 1,
       "failcopycat": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "thousandarrows": {
     "num": 614,
@@ -18855,7 +18794,6 @@
       "mirror": 1,
       "nonsky": 1
     },
-    "callback": true,
     "volatileStatus": "smackdown",
     "ignoreImmunity": {
       "Ground": true
@@ -18866,7 +18804,8 @@
     "zMove": {
       "basePower": 180
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "thousandwaves": {
     "num": 615,
@@ -18882,11 +18821,11 @@
       "mirror": 1,
       "nonsky": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Ground",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "thrash": {
     "num": 37,
@@ -18905,11 +18844,11 @@
     "self": {
       "volatileStatus": "lockedmove"
     },
-    "callback": true,
     "secondary": null,
     "target": "randomNormal",
     "type": "Normal",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "throatchop": {
     "num": 675,
@@ -18924,14 +18863,13 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
-      "chance": 100,
-      "callback": true
+      "chance": 100
     },
     "target": "normal",
     "type": "Dark",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "thunder": {
     "num": 87,
@@ -18945,14 +18883,14 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 30,
       "status": "par"
     },
     "target": "normal",
     "type": "Electric",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "thunderbolt": {
     "num": 85,
@@ -19003,11 +18941,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Electric",
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "thunderfang": {
     "num": 422,
@@ -19163,10 +19101,10 @@
     "pp": 10,
     "priority": 0,
     "flags": {},
-    "callback": true,
     "secondary": null,
     "target": "self",
-    "type": "Normal"
+    "type": "Normal",
+    "callback": true
   },
   "topsyturvy": {
     "num": 576,
@@ -19182,7 +19120,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
@@ -19191,7 +19128,8 @@
         "atk": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "torchsong": {
     "num": 871,
@@ -19234,7 +19172,6 @@
       "bypasssub": 1
     },
     "volatileStatus": "torment",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Dark",
@@ -19243,7 +19180,8 @@
         "def": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "toxic": {
     "num": 92,
@@ -19283,7 +19221,6 @@
       "mustpressure": 1
     },
     "sideCondition": "toxicspikes",
-    "callback": true,
     "secondary": null,
     "target": "foeSide",
     "type": "Poison",
@@ -19292,7 +19229,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "toxicthread": {
     "num": 672,
@@ -19362,14 +19300,14 @@
       "failinstruct": 1,
       "failmimic": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
     "zMove": {
       "effect": "heal"
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "triattack": {
     "num": 161,
@@ -19384,12 +19322,12 @@
       "mirror": 1
     },
     "secondary": {
-      "chance": 20,
-      "callback": true
+      "chance": 20
     },
     "target": "normal",
     "type": "Normal",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "trick": {
     "num": 271,
@@ -19406,7 +19344,6 @@
       "noassist": 1,
       "failcopycat": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Psychic",
@@ -19415,7 +19352,8 @@
         "spe": 2
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "trickortreat": {
     "num": 567,
@@ -19432,7 +19370,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Ghost",
@@ -19445,7 +19382,8 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "trickroom": {
     "num": 433,
@@ -19459,7 +19397,6 @@
       "mirror": 1
     },
     "pseudoWeather": "trickroom",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Psychic",
@@ -19468,7 +19405,8 @@
         "accuracy": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "triplearrows": {
     "num": 843,
@@ -19502,7 +19440,6 @@
     "num": 813,
     "accuracy": 90,
     "basePower": 20,
-    "callback": true,
     "category": "Physical",
     "name": "Triple Axel",
     "pp": 10,
@@ -19522,7 +19459,8 @@
     },
     "maxMove": {
       "basePower": 140
-    }
+    },
+    "callback": true
   },
   "tripledive": {
     "num": 865,
@@ -19546,7 +19484,6 @@
     "num": 167,
     "accuracy": 90,
     "basePower": 10,
-    "callback": true,
     "category": "Physical",
     "name": "Triple Kick",
     "pp": 10,
@@ -19567,7 +19504,8 @@
     "maxMove": {
       "basePower": 80
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "tropkick": {
     "num": 688,
@@ -19596,7 +19534,6 @@
     "num": 376,
     "accuracy": true,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "isNonstandard": "Past",
     "name": "Trump Card",
@@ -19617,7 +19554,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "twinbeam": {
     "num": 888,
@@ -19731,13 +19669,13 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 100,
       "volatileStatus": "flinch"
     },
     "target": "normal",
-    "type": "Fighting"
+    "type": "Fighting",
+    "callback": true
   },
   "uproar": {
     "num": 253,
@@ -19758,11 +19696,11 @@
     "self": {
       "volatileStatus": "uproar"
     },
-    "callback": true,
     "secondary": null,
     "target": "randomNormal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "vacuumwave": {
     "num": 410,
@@ -19813,7 +19751,6 @@
     "num": 741,
     "accuracy": true,
     "basePower": 0,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "LGPE",
     "name": "Veevee Volley",
@@ -19827,7 +19764,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Normal",
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "venomdrench": {
     "num": 599,
@@ -19843,7 +19781,6 @@
       "reflectable": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Poison",
@@ -19852,7 +19789,8 @@
         "def": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "venoshock": {
     "num": 474,
@@ -19866,11 +19804,11 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Poison",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "victorydance": {
     "num": 837,
@@ -19995,7 +19933,6 @@
     "num": 358,
     "accuracy": 100,
     "basePower": 70,
-    "callback": true,
     "category": "Physical",
     "isNonstandard": "Past",
     "name": "Wake-Up Slap",
@@ -20009,7 +19946,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Fighting",
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "waterfall": {
     "num": 127,
@@ -20053,7 +19991,6 @@
     "num": 518,
     "accuracy": 100,
     "basePower": 80,
-    "callback": true,
     "category": "Special",
     "name": "Water Pledge",
     "pp": 10,
@@ -20067,7 +20004,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Water",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "waterpulse": {
     "num": 352,
@@ -20095,7 +20033,6 @@
     "num": 594,
     "accuracy": 100,
     "basePower": 15,
-    "callback": true,
     "category": "Special",
     "name": "Water Shuriken",
     "pp": 20,
@@ -20111,7 +20048,8 @@
     "secondary": null,
     "target": "normal",
     "type": "Water",
-    "contestType": "Cool"
+    "contestType": "Cool",
+    "callback": true
   },
   "watersport": {
     "num": 346,
@@ -20126,7 +20064,6 @@
       "nonsky": 1
     },
     "pseudoWeather": "watersport",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Water",
@@ -20135,13 +20072,13 @@
         "spd": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "waterspout": {
     "num": 323,
     "accuracy": 100,
     "basePower": 150,
-    "callback": true,
     "category": "Special",
     "name": "Water Spout",
     "pp": 5,
@@ -20153,7 +20090,8 @@
     "secondary": null,
     "target": "allAdjacentFoes",
     "type": "Water",
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "wavecrash": {
     "num": 834,
@@ -20189,7 +20127,6 @@
       "protect": 1,
       "mirror": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -20199,7 +20136,8 @@
     "maxMove": {
       "basePower": 130
     },
-    "contestType": "Beautiful"
+    "contestType": "Beautiful",
+    "callback": true
   },
   "whirlpool": {
     "num": 250,
@@ -20305,7 +20243,6 @@
       "snatch": 1
     },
     "sideCondition": "wideguard",
-    "callback": true,
     "secondary": null,
     "target": "allySide",
     "type": "Rock",
@@ -20314,7 +20251,8 @@
         "def": 1
       }
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "wildboltstorm": {
     "num": 847,
@@ -20329,13 +20267,13 @@
       "mirror": 1,
       "wind": 1
     },
-    "callback": true,
     "secondary": {
       "chance": 20,
       "status": "par"
     },
     "target": "allAdjacentFoes",
-    "type": "Electric"
+    "type": "Electric",
+    "callback": true
   },
   "wildcharge": {
     "num": 528,
@@ -20415,7 +20353,6 @@
       "heal": 1
     },
     "slotCondition": "Wish",
-    "callback": true,
     "secondary": null,
     "target": "self",
     "type": "Normal",
@@ -20424,7 +20361,8 @@
         "spd": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "withdraw": {
     "num": 110,
@@ -20462,7 +20400,6 @@
       "mirror": 1
     },
     "pseudoWeather": "wonderroom",
-    "callback": true,
     "secondary": null,
     "target": "all",
     "type": "Psychic",
@@ -20471,7 +20408,8 @@
         "spd": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "woodhammer": {
     "num": 452,
@@ -20534,7 +20472,6 @@
       "mirror": 1,
       "allyanim": 1
     },
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Grass",
@@ -20543,7 +20480,8 @@
         "spe": 1
       }
     },
-    "contestType": "Clever"
+    "contestType": "Clever",
+    "callback": true
   },
   "wrap": {
     "num": 35,
@@ -20568,7 +20506,6 @@
     "num": 378,
     "accuracy": 100,
     "basePower": 0,
-    "callback": true,
     "category": "Special",
     "isNonstandard": "Past",
     "name": "Wring Out",
@@ -20588,7 +20525,8 @@
     "maxMove": {
       "basePower": 140
     },
-    "contestType": "Tough"
+    "contestType": "Tough",
+    "callback": true
   },
   "xscissor": {
     "num": 404,
@@ -20623,7 +20561,6 @@
       "mirror": 1
     },
     "volatileStatus": "yawn",
-    "callback": true,
     "secondary": null,
     "target": "normal",
     "type": "Normal",
@@ -20632,7 +20569,8 @@
         "spe": 1
       }
     },
-    "contestType": "Cute"
+    "contestType": "Cute",
+    "callback": true
   },
   "zapcannon": {
     "num": 192,

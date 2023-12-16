@@ -35,6 +35,8 @@ def collect_data(file: str) -> dict:
     parsed = []
     code_block = False
     code_start_indent = -1
+    # flag only the whole section, rather than replacing code blocks
+    had_ts_code = False
 
     for line in raw:
         indent = line.count("\t")
@@ -51,8 +53,9 @@ def collect_data(file: str) -> dict:
         # print(indent, code_start_indent, code_block, line.strip())
 
         if code_block and code_start_indent == -1:
-            parsed.append(f"{'  ' * indent}callback: True,\n")
+            # parsed.append(f"{'  ' * indent}callback: True,\n")
             code_start_indent = indent
+            had_ts_code = True
             continue
         elif code_block and "}," in line.strip() and indent == code_start_indent:
             code_start_indent = -1
@@ -61,6 +64,10 @@ def collect_data(file: str) -> dict:
             continue
         elif code_block:
             continue
+
+        if indent == 1 and had_ts_code:
+            parsed.append(f"{'  ' * indent}callback: True,\n")
+            had_ts_code = False
 
         line = line.replace("\t", "  ")
         line = line.replace("//", "#")
@@ -79,14 +86,14 @@ def collect_data(file: str) -> dict:
 
 
 if __name__ == "__main__":
-    data = collect_data(ROOT / "pokemon-showdown/data/pokedex.ts")
-    with open(ROOT / "jsondata/pokedex.json", "w+") as o:
-        json.dump(data, o, indent = 2)
+    # data = collect_data(ROOT / "pokemon-showdown/data/pokedex.ts")
+    # with open(ROOT / "jsondata/pokedex.json", "w+") as o:
+    #     json.dump(data, o, indent = 2)
 
     data = collect_data(ROOT / "pokemon-showdown/data/moves.ts")
     with open(ROOT / "jsondata/moves.json", "w+") as o:
         json.dump(data, o, indent = 2)
 
-    data = collect_data(ROOT / "pokemon-showdown/data/learnsets.ts")
-    with open(ROOT / "jsondata/learnsets.json", "w+") as o:
-        json.dump(data, o, indent = 2)
+    # data = collect_data(ROOT / "pokemon-showdown/data/learnsets.ts")
+    # with open(ROOT / "jsondata/learnsets.json", "w+") as o:
+    #     json.dump(data, o, indent = 2)
