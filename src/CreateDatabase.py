@@ -7,7 +7,7 @@ from src.utils.clean_sql import remove_sql_illegal_characters
 
 
 SOURCE_POKES = package_root() / "jsondata/pokedex.json"
-SOURCE_MOVES = package_root() / "jsondata/learnsets.json"
+SOURCE_MOVES = package_root() / "jsondata/moves.json"
 
 
 class Conversion:
@@ -25,21 +25,6 @@ class Conversion:
 
 class Injector:
 
-    convert = [Conversion("num", ["num"], "INT"),
-               Conversion("name", ["name"], "TEXT"),
-               Conversion("type1", ["types", 0], "TEXT"),
-               Conversion("type2", ["types", 1], "TEXT"),
-               Conversion("hp", ["baseStats", "hp"], "INT"),
-               Conversion("atk", ["baseStats", "atk"], "INT"),
-               Conversion("def", ["baseStats", "def"], "INT"),
-               Conversion("spa", ["baseStats", "spa"], "INT"),
-               Conversion("spd", ["baseStats", "spd"], "INT"),
-               Conversion("spe", ["baseStats", "spe"], "INT"),
-               Conversion("ability1", ["abilities", "0"],"TEXT"),
-               Conversion("ability2", ["abilities", "1"], "TEXT"),
-               Conversion("abilityH", ["abilities", "H"], "TEXT"),
-               ]
-
     def __init__(self, file):
         self._db = Database(file)
 
@@ -55,6 +40,18 @@ class Injector:
     def connection(self):
         return self.db.connection
 
+    @property
+    def name(self):
+        raise NotImplementedError
+
+    @property
+    def source(self):
+        raise NotImplementedError
+
+    @property
+    def convert(self):
+        raise NotImplementedError
+
     def create(self):
         print("recreating database")
         cols = []
@@ -63,35 +60,20 @@ class Injector:
             cols.append(conversion.fieldname)
             types.append(conversion.datatype)
 
-        self.db.create_table("pokemon", cols, types, force=True)
-
-        with open(SOURCE_MOVES) as o:
-            movedata = json.load(o)
-
-        allmoves = []
-        for pokemon, data in movedata.items():
-            learnset = data.get("learnset", {})
-
-            for move in learnset:
-                if move not in allmoves:
-                    allmoves.append(move)
-
-        allmoves = sorted(allmoves)
-
-        self.db.create_table("learnsets", [allmoves[0]], ["TEXT"], force=True)
-
-        for move in allmoves[1:30]:
-            self.db.execute(f"ALTER TABLE learnsets ADD {move} TEXT", commit=True)
-
-        print(f"added up to move {move}")
+        self.db.create_table(self.name, cols, types, force=True)
 
     def fill(self):
 
-        with open(SOURCE_POKES) as o:
-            pokedata = json.load(o)
+        with open(self.source) as o:
+            raw = json.load(o)
 
-        for name, data in pokedata.items():
-            print(f"parsing pokemon {name}", end="... ")
+        data_fields = {}
+        for name, data in raw.items():
+            print(f"parsing item {name}", end="... ")
+
+            for key in data:
+                if key not in data_fields:
+                    data_fields[key] = False
 
             num = data["num"]
 
@@ -104,11 +86,19 @@ class Injector:
             for convert in self.convert:
                 field = convert.fieldname
                 jpath = convert.jsonpath
+                dtype = convert.datatype
 
                 fields.append(field)
 
                 temp = None
                 for term in jpath:
+
+                    if term not in data:
+                        temp = None
+                        continue
+
+                    if term in data_fields:
+                        data_fields[term] = True
                     try:
                         temp = temp[term]
                     except TypeError:
@@ -120,9 +110,14 @@ class Injector:
                         temp = None
                         continue
 
+                if dtype == "INT" and isinstance(temp, bool):
+                    temp = 101
+                elif dtype == "BOOL":
+                    temp = bool(temp)
+
                 values.append(f"'{remove_sql_illegal_characters(temp)}'")
 
-            cmd = "INSERT INTO Pokemon (" + ", ".join(fields) + ")\nVALUES (" + ", ".join(values) + ")"
+            cmd = f"INSERT INTO {self.name} (" + ", ".join(fields) + ")\nVALUES (" + ", ".join(values) + ")"
 
             print("Done.")
 
@@ -132,11 +127,66 @@ class Injector:
             conn.commit()
             cur.close()
 
+        print("data types used:")
+        maxlen = max([len(k) for k in data_fields])
+        for k, v in data_fields.items():
+            print(k.rjust(maxlen), v)
+
+
+class Pokemon(Injector):
+
+    convert = [Conversion("num", ["num"], "INT"),
+               Conversion("name", ["name"], "TEXT"),
+               Conversion("type1", ["types", 0], "TEXT"),
+               Conversion("type2", ["types", 1], "TEXT"),
+               Conversion("hp", ["baseStats", "hp"], "INT"),
+               Conversion("atk", ["baseStats", "atk"], "INT"),
+               Conversion("def", ["baseStats", "def"], "INT"),
+               Conversion("spa", ["baseStats", "spa"], "INT"),
+               Conversion("spd", ["baseStats", "spd"], "INT"),
+               Conversion("spe", ["baseStats", "spe"], "INT"),
+               Conversion("ability1", ["abilities", "0"],"TEXT"),
+               Conversion("ability2", ["abilities", "1"], "TEXT"),
+               Conversion("abilityH", ["abilities", "H"], "TEXT"),
+               Conversion("weight", ["weightkg"], "FLOAT"),
+               ]
+
+    name = "pokemon"
+    source = SOURCE_POKES
+
+class Move(Injector):
+
+    convert = [Conversion("num", ["num"], "INT"),
+               Conversion("accuracy", ["accuracy"], "INT"),
+               Conversion("power", ["basePower"], "INT"),
+               Conversion("category", ["category"], "TEXT"),
+               Conversion("name", ["name"], "TEXT"),
+               Conversion("type", ["type"], "TEXT"),
+               Conversion("target", ["target"], "TEXT"),
+               Conversion("pp", ["pp"], "INT"),
+               Conversion("priority", ["priority"], "INT"),
+               Conversion("stallingMove", ["stallingMove"], "BOOL"),
+               Conversion("contact", ["flags", "contact"], "BOOL"),
+               Conversion("protect", ["flags", "protect"], "BOOL"),
+               Conversion("mirror", ["flags", "mirror"], "BOOL"),
+               Conversion("snatch", ["flags", "snatch"], "BOOL"),
+               Conversion("bullet", ["flags", "bullet"], "BOOL"),
+               Conversion("distance", ["flags", "distance"], "BOOL"),
+               Conversion("slicing", ["flags", "slicing"], "BOOL"),
+               Conversion("wind", ["flags", "wind"], "BOOL"),
+               Conversion("bypasssub", ["flags", "bypasssub"], "BOOL"),
+               Conversion("allyanim", ["flags", "allyanim"], "BOOL"),
+               Conversion("sound", ["flags", "sound"], "BOOL"),
+               ]
+
+    name = "moves"
+    source = SOURCE_MOVES
+
 
 if __name__ == "__main__":
 
     path = package_root() / pathlib.Path("sql/test.db")
 
-    db = Injector(path)
+    db = Move(path)
     db.create()
-    # db.fill()
+    db.fill()
