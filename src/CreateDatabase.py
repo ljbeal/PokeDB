@@ -92,17 +92,16 @@ class Injector:
 
                 temp = None
                 for term in jpath:
-
-                    if term not in data:
-                        temp = None
-                        continue
-
                     if term in data_fields:
                         data_fields[term] = True
+
                     try:
                         temp = temp[term]
                     except TypeError:
-                        temp = data[term]
+                        try:
+                            temp = data[term]
+                        except KeyError:
+                            continue
                     except KeyError:
                         temp = None
                         continue
