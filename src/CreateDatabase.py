@@ -175,6 +175,7 @@ class Pokemon(Injector):
                Conversion("abilityH", ["abilities", "H"], "TEXT"),
                Conversion("abilityS", ["abilities", "S"], "TEXT"),
                Conversion("weight", ["weightkg"], "FLOAT"),
+               Conversion("forme", ["forme"], "TEXT"),
                ]
 
     name = "pokemon"
