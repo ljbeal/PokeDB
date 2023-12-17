@@ -173,6 +173,7 @@ class Pokemon(Injector):
                Conversion("ability1", ["abilities", "0"],"TEXT"),
                Conversion("ability2", ["abilities", "1"], "TEXT"),
                Conversion("abilityH", ["abilities", "H"], "TEXT"),
+               Conversion("abilityS", ["abilities", "S"], "TEXT"),
                Conversion("weight", ["weightkg"], "FLOAT"),
                ]
 
