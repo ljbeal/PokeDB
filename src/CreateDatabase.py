@@ -24,6 +24,13 @@ class Conversion:
 
 
 class Injector:
+    """
+    Base class for a database insertion schema.
+
+    Must specify the table name, json source path and a schema.
+
+    Schema definition is done by a list of Conversion objects within a `convert` property
+    """
 
     def __init__(self, file):
         self._db = Database(file)
@@ -139,7 +146,7 @@ class Injector:
                     value = bool(value)
 
                 fields.append(field)
-                values.append(f"'{remove_sql_illegal_characters(value)}'")
+                values.append(f"'{remove_sql_illegal_characters(str(value))}'")
 
             cmd = f"INSERT INTO {self.name} (" + ", ".join(fields) + ")\nVALUES (" + ", ".join(values) + ")"
 
