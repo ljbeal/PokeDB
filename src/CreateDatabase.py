@@ -64,6 +64,24 @@ class Injector:
 
     def fill(self):
 
+        def flatten_dict(data: dict) -> [list, list]:
+            """
+            Return a list of all keys within a dict
+            """
+            keys = []
+            vals = []
+            for k, v in data.items():
+                if isinstance(v, dict):
+                    newkeys, newvals =  flatten_dict(v)
+
+                    keys += [f"{k}/{val}" for val in newkeys]
+                    vals += newvals
+                else:
+                    keys.append(k)
+                    vals.append(v)
+
+            return keys, vals
+
         with open(self.source) as o:
             raw = json.load(o)
 
@@ -71,7 +89,10 @@ class Injector:
         for name, data in raw.items():
             print(f"parsing item {name}", end="... ")
 
-            for key in data:
+            keys, vals = flatten_dict(data)
+            flat_data = {k: v for k, v in zip(keys, vals)}
+
+            for key in keys:
                 if key not in data_fields:
                     data_fields[key] = False
 
@@ -88,33 +109,22 @@ class Injector:
                 jpath = convert.jsonpath
                 dtype = convert.datatype
 
-                fields.append(field)
+                path = "/".join(jpath)
 
-                temp = None
-                for term in jpath:
-                    if term in data_fields:
-                        data_fields[term] = True
+                value = flat_data.get(path, None)
 
-                    try:
-                        temp = temp[term]
-                    except TypeError:
-                        try:
-                            temp = data[term]
-                        except KeyError:
-                            continue
-                    except KeyError:
-                        temp = None
-                        continue
-                    except IndexError:
-                        temp = None
-                        continue
+                if value is not None:
+                    data_fields[path] = True
+                else:
+                    continue
 
-                if dtype == "INT" and isinstance(temp, bool):
-                    temp = 101
+                if dtype == "INT" and isinstance(value, bool):
+                    value = 101
                 elif dtype == "BOOL":
-                    temp = bool(temp)
+                    value = bool(value)
 
-                values.append(f"'{remove_sql_illegal_characters(temp)}'")
+                fields.append(field)
+                values.append(f"'{remove_sql_illegal_characters(value)}'")
 
             cmd = f"INSERT INTO {self.name} (" + ", ".join(fields) + ")\nVALUES (" + ", ".join(values) + ")"
 
@@ -128,8 +138,9 @@ class Injector:
 
         print("data types used:")
         maxlen = max([len(k) for k in data_fields])
-        for k, v in data_fields.items():
-            print(k.rjust(maxlen), v)
+        for key in sorted(list(data_fields.keys())):
+            v = data_fields[key]
+            print(key.ljust(maxlen), v)
 
 
 class Pokemon(Injector):
