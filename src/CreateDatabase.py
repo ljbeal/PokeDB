@@ -109,9 +109,24 @@ class Injector:
                 jpath = convert.jsonpath
                 dtype = convert.datatype
 
-                path = "/".join(jpath)
+                path = []
+                idx = []
+                for item in jpath:
+                    if isinstance(item, int):
+                        idx.append(item)
+                    else:
+                        path.append(item)
+
+                path = "/".join(path)
 
                 value = flat_data.get(path, None)
+
+                for i in idx:
+                    try:
+                        value = value[i]
+                    except IndexError:
+                        # this index doesn't exist, invalidate the result
+                        value = None
 
                 if value is not None:
                     data_fields[path] = True
@@ -197,6 +212,6 @@ if __name__ == "__main__":
 
     path = package_root() / pathlib.Path("sql/test.db")
 
-    db = Move(path)
+    db = Pokemon(path)
     db.create()
     db.fill()
