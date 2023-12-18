@@ -15,12 +15,14 @@ class Conversion:
     Simple class that stores information on converting the json data to sql
     """
 
-    __slots__ = ["fieldname", "jsonpath", "datatype"]
+    __slots__ = ["fieldname", "jsonpath", "datatype", "multipath"]
 
-    def __init__(self, fieldname, jsonpath, datatype):
+    def __init__(self, fieldname: str, jsonpath: list, datatype: str):
         self.fieldname = fieldname
         self.jsonpath = jsonpath
         self.datatype = datatype
+        # if we give a list of lists, flag this conversion as multi-key
+        self.multipath = isinstance(jsonpath[0], list)
 
 
 class Injector:
@@ -112,32 +114,49 @@ class Injector:
             fields = []
             values = []
             for convert in self.convert:
+                # get the field, path(s) and data type
                 field = convert.fieldname
                 jpath = convert.jsonpath
                 dtype = convert.datatype
+                # if we're not multipathing, just add the path to a list and proceed
+                if not convert.multipath:
+                    jpath = [jpath]
 
-                path = []
-                idx = []
-                for item in jpath:
-                    if isinstance(item, int):
-                        idx.append(item)
-                    else:
-                        path.append(item)
+                # iterate over all paths, adding the result to vals, to be reduced later
+                vals = []
+                for p in jpath:
+                    # need to separate out string and int "paths"
+                    path = []
+                    idx = []
+                    for item in p:
+                        if isinstance(item, int):
+                            idx.append(item)
+                        else:
+                            path.append(item)
+                    path = "/".join(path)
 
-                path = "/".join(path)
+                    value = flat_data.get(path, None)
 
-                value = flat_data.get(path, None)
+                    for i in idx:
+                        try:
+                            value = value[i]
+                        except IndexError:
+                            # this index doesn't exist, invalidate the result
+                            value = None
 
-                for i in idx:
-                    try:
-                        value = value[i]
-                    except IndexError:
-                        # this index doesn't exist, invalidate the result
-                        value = None
+                    if value is not None:
+                        data_fields[path] = True
 
-                if value is not None:
-                    data_fields[path] = True
-                else:
+                    vals.append(value)
+
+                value = None
+                for v in vals:
+                    if value is None:
+                        value = v
+                    elif v != value and v is not None:
+                        raise ValueError(f"got differing values for field {field}, {v} vs {value}")
+
+                if value is None:
                     continue
 
                 if dtype == "INT" and isinstance(value, bool):
@@ -214,24 +233,19 @@ class Move(Injector):
                # Conversion("recoilA", ["recoil", 0], "INT"),
                # Conversion("recoilB", ["recoil", 1], "INT"),
                Conversion("status", ["status"], "TEXT"),
+               Conversion("boostsevasion", ["boosts", "evasion"], "INT"),
                Conversion("boostsacc", ["boosts", "accuracy"], "INT"),
                Conversion("boostsatk", ["boosts", "atk"], "INT"),
                Conversion("boostsdef", ["boosts", "def"], "INT"),
-               Conversion("boostsevasion", ["boosts", "evasion"], "INT"),
                Conversion("boostsspa", ["boosts", "spa"], "INT"),
                Conversion("boostsspd", ["boosts", "spd"], "INT"),
                Conversion("boostsspe", ["boosts", "spe"], "INT"),
                Conversion("selfboostsacc", ["self", "boosts", "accuracy"], "INT"),
-               Conversion("selfboostsatk", ["self", "boosts", "atk"], "INT"),
-               Conversion("selfboostsdef", ["self", "boosts", "def"], "INT"),
-               Conversion("selfboostsspa", ["self", "boosts", "spa"], "INT"),
-               Conversion("selfboostsspd", ["self", "boosts", "spd"], "INT"),
-               Conversion("selfboostsspe", ["self", "boosts", "spe"], "INT"),
-               Conversion("selfBoostboostsatk", ["selfBoost", "boosts", "atk"], "INT"),
-               Conversion("selfBoostboostsdef", ["selfBoost", "boosts", "def"], "INT"),
-               Conversion("selfBoostboostsspa", ["selfBoost", "boosts", "spa"], "INT"),
-               Conversion("selfBoostboostsspd", ["selfBoost", "boosts", "spd"], "INT"),
-               Conversion("selfBoostboostsspe", ["selfBoost", "boosts", "spe"], "INT"),
+               Conversion("selfboostsatk", [["self", "boosts", "atk"], ["selfBoost", "boosts", "atk"]], "INT"),
+               Conversion("selfboostsdef", [["self", "boosts", "def"], ["selfBoost", "boosts", "def"]], "INT"),
+               Conversion("selfboostsspa", [["self", "boosts", "spa"], ["selfBoost", "boosts", "spa"]], "INT"),
+               Conversion("selfboostsspd", [["self", "boosts", "spd"], ["selfBoost", "boosts", "spd"]], "INT"),
+               Conversion("selfboostsspe", [["self", "boosts", "spe"], ["selfBoost", "boosts", "spe"]], "INT"),
                Conversion("secondarychance", ["secondary", "chance"], "INT"),
                Conversion("secondarystatus", ["secondary", "status"], "TEXT"),
                Conversion("secondaryvolatilestatus", ["secondary", "volatileStatus"], "TEXT"),
