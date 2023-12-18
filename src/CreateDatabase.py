@@ -1,4 +1,5 @@
 import json
+import math
 import pathlib
 
 from src import package_root
@@ -6,6 +7,7 @@ from src.Database import Database
 from src.utils.clean_sql import remove_sql_illegal_characters
 
 
+SOURCE_LEARNSET = package_root() / "jsondata/learnsets.json"
 SOURCE_POKES = package_root() / "jsondata/pokedex.json"
 SOURCE_MOVES = package_root() / "jsondata/moves.json"
 
@@ -36,6 +38,9 @@ class Injector:
 
     def __init__(self, file):
         self._db = Database(file)
+
+        self.create()
+        self.fill()
 
     @property
     def db(self):
@@ -188,6 +193,81 @@ class Injector:
             print(key.ljust(maxlen), v)
 
 
+class Learnset(Injector):
+
+    name = "learnset"
+    source = SOURCE_LEARNSET
+
+    def create(self):
+        with open(self.source) as o:
+            rawdata = json.load(o)
+
+        flat = {}
+        allmoves = []
+        for poke, data in rawdata.items():
+            learnset = data.get("learnset", {})
+
+            flat[poke] = {}
+            for move, details in learnset.items():
+                if move not in allmoves:
+                    allmoves.append(move)
+
+                legal = False
+
+                for condition in details:
+                    if condition.startswith("9"):
+                        legal = True
+
+                if legal:
+                    flat[poke][move] = True
+
+        # need to chunk the moves
+        chunksize = 100
+        nchunks = math.ceil(len(allmoves) / chunksize)
+
+        print(f"creating {nchunks} tables of size {chunksize} for {len(allmoves)} moves")
+
+        locations = {}
+        for i in range(nchunks):
+            name = f"{self.name}_{i}"
+
+            u = i * chunksize
+            v = min((i + 1) * chunksize, len(allmoves))
+
+            slice = allmoves[u:v]
+
+            locations[name] = slice
+
+            self.db.create_table(name, ["pokemon"] + slice, ["TEXT"] + ["BOOL"] * (v - u), force=True)
+
+        conn = self.connection
+        cur = conn.cursor()
+        for poke, learnset in flat.items():
+            if len(learnset) == 0:
+                continue
+
+            # need to fill all the tables one by one
+            data = {}
+            for table, moves in locations.items():
+                overlap = list(set(moves) & set(learnset))
+
+                # print(f"from table {table}, {poke} learns {overlap}")
+
+                cols = ",".join(["pokemon"] + overlap)
+                vals = ",".join([f"'{poke}'"] + ["'True'"] * len(overlap))
+
+                cmd = f"INSERT INTO {table} ({cols}) VALUES ({vals})"
+
+                cur.execute(cmd)
+
+            print(f"added learnset for pokemon {poke}")
+
+        conn.commit()
+
+    def fill(self):
+        return None
+
+
 class Pokemon(Injector):
 
     convert = [Conversion("num", ["num"], "INT"),
@@ -308,6 +388,6 @@ if __name__ == "__main__":
 
     path = package_root() / pathlib.Path("sql/test.db")
 
-    db = Move(path)
-    db.create()
-    db.fill()
+    pokes = Pokemon(path)
+    moves = Move(path)
+    learn = Learnset(path)
