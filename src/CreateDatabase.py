@@ -142,11 +142,15 @@ class Injector:
 
                 if dtype == "INT" and isinstance(value, bool):
                     value = 101
+
+                if dtype == "TEXT":
+                    values.append(f"'{remove_sql_illegal_characters(str(value))}'")
                 elif dtype == "BOOL":
-                    value = bool(value)
+                    values.append(str(bool(value)))
+                else:
+                    values.append(str(value))
 
                 fields.append(field)
-                values.append(f"'{remove_sql_illegal_characters(str(value))}'")
 
             cmd = f"INSERT INTO {self.name} (" + ", ".join(fields) + ")\nVALUES (" + ", ".join(values) + ")"
 
@@ -231,19 +235,19 @@ class Move(Injector):
                Conversion("secondarychance", ["secondary", "chance"], "INT"),
                Conversion("secondarystatus", ["secondary", "status"], "TEXT"),
                Conversion("secondaryvolatilestatus", ["secondary", "volatileStatus"], "TEXT"),
-               Conversion("secondaryboostsaccuracy", ["secondary", "boosts", "accuracy"], "TEXT"),
-               Conversion("secondaryboostsatk", ["secondary", "boosts", "atk"], "TEXT"),
-               Conversion("secondaryboostsdef", ["secondary", "boosts", "def"], "TEXT"),
-               Conversion("secondaryboostsevasion", ["secondary", "boosts", "evasion"], "TEXT"),
-               Conversion("secondaryboostsspa", ["secondary", "boosts", "spa"], "TEXT"),
-               Conversion("secondaryboostsspd", ["secondary", "boosts", "spd"], "TEXT"),
-               Conversion("secondaryboostsspe", ["secondary", "boosts", "spe"], "TEXT"),
-               Conversion("secondaryselfboostsatk", ["secondary", "self", "boosts", "atk"], "TEXT"),
-               Conversion("secondaryselfboostsdef", ["secondary", "self", "boosts", "def"], "TEXT"),
-               Conversion("secondaryselfboostsevasion", ["secondary", "self", "boosts", "evasion"], "TEXT"),
-               Conversion("secondaryselfboostsspa", ["secondary", "self", "boosts", "spa"], "TEXT"),
-               Conversion("secondaryselfboostsspd", ["secondary", "self", "boosts", "spd"], "TEXT"),
-               Conversion("secondaryselfboostsspe", ["secondary", "self", "boosts", "spe"], "TEXT"),
+               Conversion("secondaryboostsaccuracy", ["secondary", "boosts", "accuracy"], "INT"),
+               Conversion("secondaryboostsatk", ["secondary", "boosts", "atk"], "INT"),
+               Conversion("secondaryboostsdef", ["secondary", "boosts", "def"], "INT"),
+               Conversion("secondaryboostsevasion", ["secondary", "boosts", "evasion"], "INT"),
+               Conversion("secondaryboostsspa", ["secondary", "boosts", "spa"], "INT"),
+               Conversion("secondaryboostsspd", ["secondary", "boosts", "spd"], "INT"),
+               Conversion("secondaryboostsspe", ["secondary", "boosts", "spe"], "INT"),
+               Conversion("secondaryselfboostsatk", ["secondary", "self", "boosts", "atk"], "INT"),
+               Conversion("secondaryselfboostsdef", ["secondary", "self", "boosts", "def"], "INT"),
+               Conversion("secondaryselfboostsevasion", ["secondary", "self", "boosts", "evasion"], "INT"),
+               Conversion("secondaryselfboostsspa", ["secondary", "self", "boosts", "spa"], "INT"),
+               Conversion("secondaryselfboostsspd", ["secondary", "self", "boosts", "spd"], "INT"),
+               Conversion("secondaryselfboostsspe", ["secondary", "self", "boosts", "spe"], "INT"),
                Conversion("dustproof", ["secondary", "dustproof"], "TEXT"),
                Conversion("bite", ["flags", "bite"], "BOOL"),
                Conversion("bullet", ["flags", "bullet"], "BOOL"),
