@@ -19,8 +19,10 @@ class Database:
     def connection(self):
         return sqlite3.connect(self.file)
 
-    def execute(self, cmd, commit: bool = False):
-        
+    def execute(self, cmd: str, commit: bool = False):
+        """
+        Execute one single command
+        """
         conn = None
         try:
             conn = sqlite3.connect(self.file)
@@ -35,7 +37,9 @@ class Database:
                 conn.close()
 
     def create_table(self, name: str, columns: list, types: list, force: bool = False):
-
+        """
+        Insert table into database
+        """
         if force:
             self.execute(f"DROP TABLE if EXISTS {name}")
 
@@ -52,7 +56,9 @@ class Database:
         self.execute(create)
 
     def find_name(self, name: str | list | None = None) -> list:
-
+        """
+        Find a pokemon by name, or list of names
+        """
         def parse_query(field: str, query: str | list) -> str:
             if query is None:
                 raise ValueError("query cannot be None")
