@@ -212,14 +212,7 @@ class Learnset(Injector):
                 if move not in allmoves:
                     allmoves.append(move)
 
-                legal = False
-
-                for condition in details:
-                    if condition.startswith("9"):
-                        legal = True
-
-                if legal:
-                    flat[poke][move] = True
+                flat[poke][move] = ",".join(details)
 
         # need to chunk the moves
         chunksize = 100
@@ -238,7 +231,7 @@ class Learnset(Injector):
 
             locations[name] = slice
 
-            self.db.create_table(name, ["pokemon"] + slice, ["TEXT"] + ["BOOL"] * (v - u), force=True)
+            self.db.create_table(name, ["pokemon"] + slice, ["TEXT"] * ((v - u) + 1), force=True)
 
         conn = self.connection
         cur = conn.cursor()
@@ -247,14 +240,17 @@ class Learnset(Injector):
                 continue
 
             # need to fill all the tables one by one
-            data = {}
             for table, moves in locations.items():
                 overlap = list(set(moves) & set(learnset))
 
-                # print(f"from table {table}, {poke} learns {overlap}")
+                this_learnset = []
+                for move in overlap:
+                    this_learnset.append(f"'{learnset[move]}'")
+
+                # print(f"from table {table}, {poke} learns {this_learnset}")
 
                 cols = ",".join(["pokemon"] + overlap)
-                vals = ",".join([f"'{poke}'"] + ["'True'"] * len(overlap))
+                vals = ",".join([f"'{poke}'"] + this_learnset)
 
                 cmd = f"INSERT INTO {table} ({cols}) VALUES ({vals})"
 
@@ -388,6 +384,6 @@ if __name__ == "__main__":
 
     path = package_root() / pathlib.Path("sql/test.db")
 
-    pokes = Pokemon(path)
-    moves = Move(path)
+    # pokes = Pokemon(path)
+    # moves = Move(path)
     learn = Learnset(path)
