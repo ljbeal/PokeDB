@@ -99,6 +99,7 @@ class Injector:
         with open(self.source) as o:
             raw = json.load(o)
 
+        conn = self.connection
         data_fields = {}
         for name, data in raw.items():
             print(f"parsing item {name}", end="... ")
@@ -180,11 +181,9 @@ class Injector:
 
             print("Done.")
 
-            conn = self.connection
             cur = conn.cursor()
             cur.execute(cmd)
-            conn.commit()
-            cur.close()
+        conn.commit()
 
         print("data types used:")
         maxlen = max([len(k) for k in data_fields])
@@ -384,6 +383,6 @@ if __name__ == "__main__":
 
     path = package_root() / pathlib.Path("sql/test.db")
 
-    # pokes = Pokemon(path)
-    # moves = Move(path)
+    pokes = Pokemon(path)
+    moves = Move(path)
     learn = Learnset(path)
