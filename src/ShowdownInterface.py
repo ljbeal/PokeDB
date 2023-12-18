@@ -18,6 +18,9 @@ def collect_data(file: str) -> dict:
     """
     Extract Information from the showdown typescript files
     """
+
+    file =
+
     with open(file) as o:
         raw = o.readlines()
 
@@ -77,23 +80,24 @@ def collect_data(file: str) -> dict:
     # drop the ending semicolon and we now have valid yaml
     parsed = "".join(parsed)[:-2]
 
-    with open("debug.txt", "w+") as o:
-        o.write(parsed)
-
     data = yaml.safe_load(parsed)
 
     return data
 
 
-if __name__ == "__main__":
-    # data = collect_data(ROOT / "pokemon-showdown/data/pokedex.ts")
-    # with open(ROOT / "jsondata/pokedex.json", "w+") as o:
-    #     json.dump(data, o, indent = 2)
-
-    data = collect_data(ROOT / "pokemon-showdown/data/moves.ts")
-    with open(ROOT / "jsondata/moves.json", "w+") as o:
+def dump_data(data, file):
+    with open(file, "w+") as o:
         json.dump(data, o, indent = 2)
 
-    # data = collect_data(ROOT / "pokemon-showdown/data/learnsets.ts")
-    # with open(ROOT / "jsondata/learnsets.json", "w+") as o:
-    #     json.dump(data, o, indent = 2)
+
+def update(name):
+    print(f"updating {name}")
+    data = collect_data(ROOT / f"pokemon-showdown/data/{name}.ts")
+    with open(ROOT / f"jsondata/{name}.json", "w+") as o:
+        json.dump(data, o, indent = 2)
+
+
+if __name__ == "__main__":
+    update("pokedex")
+    update("moves")
+    update("learnsets")
