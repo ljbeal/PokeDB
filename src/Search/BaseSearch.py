@@ -1,3 +1,5 @@
+import sqlite3
+
 from src.Database import Database
 
 
@@ -16,6 +18,11 @@ class BaseSearch:
     def cmd(self, *args, **kwargs) -> str:
         raise NotImplementedError
 
+    def _search(self, query) -> sqlite3.Cursor:
+        conn = self.db.connection
+        cur = conn.cursor()
+        return cur.execute(query)
+
     def search(self, *args, **kwargs) -> list:
         cmd = self.cmd(*args, **kwargs)
 
@@ -30,8 +37,6 @@ class BaseSearch:
             case _:
                 raise ValueError(f"Table {table} not recognised!")
 
-        conn = self.db.connection
-        cur = conn.cursor()
-        result = cur.execute(cmd)
+        result = self._search(cmd)
 
         return [p[namecol] for p in result.fetchall()]
