@@ -17,10 +17,21 @@ class BaseSearch:
         raise NotImplementedError
 
     def search(self, *args, **kwargs) -> list:
+        cmd = self.cmd(*args, **kwargs)
+
+        table = cmd.split("FROM")[-1].split()[0]
+        print(table)
+
+        match table:
+            case "moves":
+                namecol = 6
+            case "pokemon":
+                namecol = 1
+            case _:
+                raise ValueError(f"Table {table} not recognised!")
 
         conn = self.db.connection
         cur = conn.cursor()
+        result = cur.execute(cmd)
 
-        result = cur.execute(self.cmd(*args, **kwargs))
-
-        return [p[1] for p in result.fetchall()]
+        return [p[namecol] for p in result.fetchall()]
