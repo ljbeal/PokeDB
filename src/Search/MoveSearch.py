@@ -44,17 +44,18 @@ class MoveSearch(BaseSearch):
 
         return cmd
 
-    def power(self, query: str) -> list:
-        moves = self.search("power " + query)
+    def _query_search(self, column, query):
+        moves = self.search(f"{column} {query}")
         return self.search_by_moves(moves)
+
+    def power(self, query: str) -> list:
+        return self._query_search("power", query)
 
     def pp(self, query: str) -> list:
-        moves = self.search("pp " + query)
-        return self.search_by_moves(moves)
+        return self._query_search("pp", query)
 
     def priority(self, query: str) -> list:
-        moves = self.search("priority " + query)
-        return self.search_by_moves(moves)
+        return self._query_search("priority", query)
 
 
 if __name__ == "__main__":
