@@ -13,10 +13,10 @@ class BaseSearch:
     def db(self):
         return self._db
 
-    def cmd(self, *args, **kwargs):
+    def cmd(self, *args, **kwargs) -> str:
         raise NotImplementedError
 
-    def search(self, *args, **kwargs):
+    def search(self, *args, **kwargs) -> list:
 
         conn = self.db.connection
         cur = conn.cursor()
