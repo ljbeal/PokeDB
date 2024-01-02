@@ -61,8 +61,6 @@ class BaseSearch:
 
         cmd = " ".join(cmd) + ";"
 
-        print(cmd)
-
         result = self._search(cmd)
 
         return [p[0] for p in result]
