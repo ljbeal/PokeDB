@@ -57,10 +57,13 @@ class MoveSearch(BaseSearch):
     def priority(self, query: str) -> list:
         return self._query_search("priority", query)
 
+    def crit_ratio(self, query: str) -> list:
+        return self._query_search("critRatio", query)
+
 
 if __name__ == "__main__":
     db = package_root() / "sql/test.db"
 
     test = MoveSearch(db)
 
-    print(test.priority(">= 1"))
+    print(test.crit_ratio(">= 1"))
