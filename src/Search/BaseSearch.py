@@ -22,7 +22,14 @@ class BaseSearch:
     def _search(self, query) -> list:
         conn = self.db.connection
         cur = conn.cursor()
-        return cur.execute(query).fetchall()
+
+        try:
+            result = cur.execute(query).fetchall()
+        except sqlite3.OperationalError as E:
+            print(f"error in query:\n{query}")
+            raise E
+
+        return result
 
     def search(self, *args, **kwargs) -> list:
         cmd = self.cmd(*args, **kwargs)
@@ -52,6 +59,10 @@ class BaseSearch:
 
         for table in learnsets[1:]:
             cmd.append(f"LEFT JOIN {table} on {learnsets[0]}.pokemon={table}.pokemon")
+
+        if len(names) == 0:
+            print("names is len 0")
+            return []
 
         tmp = []
         for move in names:
