@@ -46,7 +46,10 @@ class MoveSearch(BaseSearch):
 
     def power(self, query: str) -> list:
         moves = self.search("power " + query)
+        return self.search_by_moves(moves)
 
+    def pp(self, query: str) -> list:
+        moves = self.search("pp " + query)
         return self.search_by_moves(moves)
 
 
@@ -55,4 +58,4 @@ if __name__ == "__main__":
 
     test = MoveSearch(db)
 
-    print(test.power("== 60"))
+    print(test.pp("== 5"))
