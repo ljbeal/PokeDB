@@ -40,7 +40,7 @@ class MoveSearch(BaseSearch):
             case _:
                 raise ValueError(f"Operator {operator} not recognised!")
 
-        cmd = f"SELECT * FROM moves WHERE {stat} {operator} {val} AND pp <> 1 AND NOT name LIKE 'GMax%' AND NOT name LIKE 'HiddenPower%'"
+        cmd = f"SELECT * FROM moves WHERE {stat} {operator} {val} AND pp <> 1 AND NOT name LIKE 'Max%' AND NOT name LIKE 'HiddenPower%'"
 
         return cmd
 
@@ -52,10 +52,14 @@ class MoveSearch(BaseSearch):
         moves = self.search("pp " + query)
         return self.search_by_moves(moves)
 
+    def priority(self, query: str) -> list:
+        moves = self.search("priority " + query)
+        return self.search_by_moves(moves)
+
 
 if __name__ == "__main__":
     db = package_root() / "sql/test.db"
 
     test = MoveSearch(db)
 
-    print(test.pp("== 5"))
+    print(test.priority(">= 1"))
