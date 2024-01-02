@@ -1,46 +1,26 @@
-from src import package_root
 from src.Database import Database
-from src.utils.ListFormat import format_list
 
 
-class TypeSearch:
+class BaseSearch:
+    """
+    Individual searches should be extremely basic, to be later chained
+    """
 
-    def __init__(self, type: str | list):
-
-        if isinstance(type, str):
-            self._type = [type.title()]
-        else:
-            self._type = [t.title() for t in type]
+    def __init__(self, dbfile):
+        self._db = Database(dbfile)
 
     @property
-    def query(self):
-        return self._type
+    def db(self):
+        return self._db
 
-    def search(self):
+    def cmd(self, *args, **kwargs):
+        raise NotImplementedError
 
-        cmd = ["SELECT * FROM pokemon"]
-        if len(self.query) == 1:
-            cmd.append(f"WHERE type1 == '{self.query[0]}' OR")
-            cmd.append(f"type2 == '{self.query[0]}'")
-        else:
-            cmd.append(f"WHERE type1 in {format_list(self.query, bracket=True)} AND")
-            cmd.append(f"type2 in {format_list(self.query, bracket=True)}")
+    def search(self, *args, **kwargs):
 
-        cmd = " ".join(cmd)
+        conn = self.db.connection
+        cur = conn.cursor()
 
-        print(cmd)
+        result = cur.execute(self.cmd(*args, **kwargs))
 
-        return cmd
-
-
-if __name__ == "__main__":
-    db = Database(package_root() / "sql/test.db")
-
-    conn = db.connection
-    cur = conn.cursor()
-
-    single = TypeSearch("water")
-    multi = TypeSearch(["water", "dragon"])
-
-    print(cur.execute(single.search()).fetchall())
-    print(cur.execute(multi.search()).fetchall())
+        return [p[1] for p in result.fetchall()]
