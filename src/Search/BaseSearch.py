@@ -1,5 +1,6 @@
 import sqlite3
 
+from src import package_root
 from src.Database import Database
 
 
@@ -39,3 +40,37 @@ class BaseSearch:
         result = self._search(cmd)
 
         return [p[namecol] for p in result]
+
+    def search_by_moves(self, names: list) -> list:
+        """
+        Get a list of pokemon that know all the moves in `names`
+        """
+        tables = self._search("SELECT name FROM sqlite_master WHERE type='table';")
+        learnsets = [t[0] for t in tables if "learnset" in t[0]]
+
+        cmd = [f"SELECT {learnsets[0]}.pokemon FROM {learnsets[0]}"]
+
+        for table in learnsets[1:]:
+            cmd.append(f"LEFT JOIN {table} on {learnsets[0]}.pokemon={table}.pokemon")
+
+        tmp = []
+        for move in names:
+            tmp.append(f"{move} IS NOT NULL")
+
+        cmd.append("WHERE " + " OR ".join(tmp))
+
+        cmd = " ".join(cmd) + ";"
+
+        print(cmd)
+
+        result = self._search(cmd)
+
+        return [p[0] for p in result]
+
+
+if __name__ == "__main__":
+    db = package_root() / "sql/test.db"
+
+    test = BaseSearch(db)
+
+    print(test.search_by_moves(["blizzard", "watergun"]))
