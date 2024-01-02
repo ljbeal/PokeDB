@@ -4,7 +4,7 @@ from src import package_root
 
 class StatSearch(BaseSearch):
 
-    def cmd(self, query) -> str:
+    def cmd(self, query: str) -> str:
         """
         Search for a pokemon by single stat
 
