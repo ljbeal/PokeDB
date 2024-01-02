@@ -27,7 +27,6 @@ class BaseSearch:
         cmd = self.cmd(*args, **kwargs)
 
         table = cmd.split("FROM")[-1].split()[0]
-        print(table)
 
         match table:
             case "moves":
