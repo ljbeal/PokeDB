@@ -18,10 +18,10 @@ class BaseSearch:
     def cmd(self, *args, **kwargs) -> str:
         raise NotImplementedError
 
-    def _search(self, query) -> sqlite3.Cursor:
+    def _search(self, query) -> list:
         conn = self.db.connection
         cur = conn.cursor()
-        return cur.execute(query)
+        return cur.execute(query).fetchall()
 
     def search(self, *args, **kwargs) -> list:
         cmd = self.cmd(*args, **kwargs)
@@ -39,4 +39,4 @@ class BaseSearch:
 
         result = self._search(cmd)
 
-        return [p[namecol] for p in result.fetchall()]
+        return [p[namecol] for p in result]
